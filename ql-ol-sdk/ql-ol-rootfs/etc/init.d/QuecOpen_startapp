@@ -1,0 +1,44 @@
+#!/bin/sh
+#
+#  Copyright (C) 2016-2020 Quectel Wireless Co.,Ltd. 
+#  Quectel Wireless Proprietary and Confidential.
+# -----------------------------------------------
+#
+# Description: 
+#   init.d script for Quectel QuecOpen application.
+#
+# Created by Stanely.YONG
+#
+#############################################################
+#
+
+set -e
+
+# here user can indicate the user app path
+AppProgram=/data/QuecOpen/opentest
+
+case "$1" in
+       start)
+                ps aux|grep -v grep|grep -q ql_manager_server || /etc/init.d/start_ql_manager_server_le start
+                echo -n ">>> Starting QuecOpen application: "
+#                echo 05C6 > /sbin/usb/compositions/quec_usb_vid
+                chmod +x $AppProgram1
+#                $AppProgram1 &
+                echo "done"
+                ;;
+       stop)
+                echo -n "Stopping quectel daemon: "
+                start-stop-daemon -K -n AppImageBinV01
+                echo "done"
+                ;;
+       restart)
+                $0 stop
+                $0 start
+                ;;
+       *)
+                echo "Usage: QuecOpen_startapp { start | stop | restart }" >&2
+                exit 1
+                ;;
+esac
+
+exit 0

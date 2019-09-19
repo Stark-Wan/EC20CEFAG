@@ -1,0 +1,28 @@
+#! /bin/sh
+#
+# init.d script for quectel daemon
+
+set -e
+
+case "$1" in
+       start)
+                echo -n "Starting ql_time_daemon: "
+                start-stop-daemon -S -b -a /usr/bin/ql_time_daemon
+                echo "done"
+                ;;
+       stop)
+                echo -n "Stopping ql_time_daemon: "
+                start-stop-daemon -K -n ql_time_daemon
+                echo "done"
+                ;;
+       restart)
+                $0 stop
+                $0 start
+                ;;
+       *)
+                echo "Usage: ql_time_daemon { start | stop | restart }" >&2
+                exit 1
+                ;;
+esac
+
+exit 0

@@ -1,0 +1,19 @@
+{
+    "sync_accuracy_ms":2000,
+    "modem_sync_enable":1, // NITZ time from modem
+    "gnss_sync_enable":1,  // UTC time from GNSS
+    "ntp_sync_policy":"assist", // valid policy: assist, normal 
+    "ntp_server_probe_interval_ms":2000,
+    "ntp_server_probe_retry_count":2,
+    "ntp_failed_retry_interval_s":300,
+    "ntp_resync_interval_s":86400, // one day
+    "ntp_server_list" : [
+        "pool.ntp.org",
+        "0.pool.ntp.org",
+        "1.pool.ntp.org",
+        "cn.ntp.org.cn",
+        "cn.pool.ntp.org",
+        "us.ntp.org.cn",
+        "de.ntp.org.cn"
+    ]
+}
