@@ -1,0 +1,13 @@
+PN: quectel-fsck-fat
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-fsck-fat-doc: Quectel fsck.fat install  This package contains documentation.
+SUMMARY_quectel-fsck-fat-doc: quectel-fsck-fat version git-r1 - Documentation files
+SECTION_quectel-fsck-fat-doc: doc
+PKG_quectel-fsck-fat-doc: quectel-fsck-fat-doc
+FILES_quectel-fsck-fat-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc /usr/share/gnome/help
+FILES_INFO: {}
+PKGSIZE_quectel-fsck-fat-doc: 0

@@ -1,0 +1,14 @@
+PN: quectel-fsck-fat
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-fsck-fat-staticdev: Quectel fsck.fat install  This package contains static libraries for software development.
+SUMMARY_quectel-fsck-fat-staticdev: quectel-fsck-fat version git-r1 - Development files (Static Libraries)
+RDEPENDS_quectel-fsck-fat-staticdev: quectel-fsck-fat-dev (= git-r1)
+SECTION_quectel-fsck-fat-staticdev: devel
+PKG_quectel-fsck-fat-staticdev: quectel-fsck-fat-staticdev
+FILES_quectel-fsck-fat-staticdev: /usr/lib/*.a /lib/*.a /usr/lib/quectel-fsck-fat/*.a
+FILES_INFO: {}
+PKGSIZE_quectel-fsck-fat-staticdev: 0

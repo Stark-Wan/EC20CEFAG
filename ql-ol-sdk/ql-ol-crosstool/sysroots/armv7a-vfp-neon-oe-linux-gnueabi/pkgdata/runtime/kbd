@@ -1,0 +1,63 @@
+PN: kbd
+PV: 2.0.2
+PR: r0
+PKGV: 2.0.2
+PKGR: r0
+LICENSE: GPLv2+
+DESCRIPTION: Keytable files and keyboard utilities.
+SUMMARY: Keytable files and keyboard utilities
+RDEPENDS_kbd: update-alternatives-opkg glibc (>= 2.21)
+RPROVIDES_kbd: console-tools
+RREPLACES_kbd: console-tools
+RCONFLICTS_kbd: console-tools
+SECTION: base
+PKG_kbd: kbd
+FILES_kbd: /usr/bin/* /usr/sbin/* /usr/lib/kbd/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/kbd /usr/lib/kbd/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers
+pkg_postinst_kbd: #!/bin/sh\n\tupdate-alternatives --install /usr/bin/chvt chvt /usr/bin/chvt.kbd 100\n\tupdate-alternatives --install /usr/bin/deallocvt deallocvt /usr/bin/deallocvt.kbd 100\n\tupdate-alternatives --install /usr/bin/fgconsole fgconsole /usr/bin/fgconsole.kbd 100\n\tupdate-alternatives --install /usr/bin/openvt openvt /usr/bin/openvt.kbd 100\n
+pkg_postrm_kbd: #!/bin/sh\n\tupdate-alternatives --remove  chvt /usr/bin/chvt.kbd\n\tupdate-alternatives --remove  deallocvt /usr/bin/deallocvt.kbd\n\tupdate-alternatives --remove  fgconsole /usr/bin/fgconsole.kbd\n\tupdate-alternatives --remove  openvt /usr/bin/openvt.kbd\n
+FILERPROVIDESFLIST_kbd: /usr/bin/showkey /usr/bin/kbdinfo /usr/bin/dumpkeys /usr/bin/fgconsole.kbd /usr/bin/setvtrgb /usr/bin/psfxtable /usr/bin/chvt.kbd /usr/bin/mapscrn /usr/bin/openvt.kbd /usr/bin/setfont /usr/bin/setmetamode /usr/bin/loadunimap /usr/bin/setleds /usr/bin/setkeycodes /usr/bin/loadkeys /usr/bin/deallocvt.kbd /usr/bin/kbd@underscore@mode /usr/bin/showconsolefont /usr/bin/getkeycodes /usr/bin/kbdrate
+FILES_INFO: {"/usr/bin/showkey": 7812, "/usr/bin/psfstriptable": 9, "/usr/bin/mapscrn": 12196, "/usr/bin/unicode_start": 2425, "/usr/bin/unicode_stop": 363, "/usr/bin/openvt.kbd": 10972, "/usr/bin/psfxtable": 13672, "/usr/bin/psfgettable": 9, "/usr/bin/setmetamode": 4908, "/usr/bin/setvtrgb": 6412, "/usr/bin/loadunimap": 17100, "/usr/bin/dumpkeys": 70796, "/usr/bin/fgconsole.kbd": 5456, "/usr/bin/setkeycodes": 5240, "/usr/bin/deallocvt.kbd": 5336, "/usr/bin/setleds": 6604, "/usr/bin/kbd_mode": 6124, "/usr/bin/loadkeys": 103828, "/usr/bin/kbdrate": 6200, "/usr/bin/kbdinfo": 6440, "/usr/bin/psfaddtable": 9, "/usr/bin/chvt.kbd": 4864, "/usr/bin/setfont": 30884, "/usr/bin/showconsolefont": 10512, "/usr/bin/getkeycodes": 5600}
+FILERPROVIDES_/usr/bin/showkey_kbd: elf(buildid) (= 83221eb22b0d771c4d803a993e5c4ebe8b0d7b14)
+FILERPROVIDES_/usr/bin/kbdinfo_kbd: elf(buildid) (= 9fa4179e871ea4b62d822641e8a4e66cda6beb51)
+FILERPROVIDES_/usr/bin/dumpkeys_kbd: elf(buildid) (= 68d40303a49ccc282980ba9a46edc7c9a2457244)
+FILERPROVIDES_/usr/bin/fgconsole.kbd_kbd: elf(buildid) (= 917b2817026a78690ca5bf9dd483f0f01e3fc71d) /usr/bin/fgconsole
+FILERPROVIDES_/usr/bin/setvtrgb_kbd: elf(buildid) (= c2eb6403b1fe7ad944d9116a22d3bdf0d4eb30af)
+FILERPROVIDES_/usr/bin/psfxtable_kbd: elf(buildid) (= b298a0128d68ee345499a9abbdf0dabb35859f45)
+FILERPROVIDES_/usr/bin/chvt.kbd_kbd: elf(buildid) (= 5cc6db25a3d601cd5c837127bbc3dae7c9ac0356) /usr/bin/chvt
+FILERPROVIDES_/usr/bin/mapscrn_kbd: elf(buildid) (= b392b87e8f4f6c6f8379182cab411bff0d6a789a)
+FILERPROVIDES_/usr/bin/openvt.kbd_kbd: elf(buildid) (= 7b0c9c38a8f4a86ea7c704e289da7dafc5d61005) /usr/bin/openvt
+FILERPROVIDES_/usr/bin/setfont_kbd: elf(buildid) (= e05fd10fd206d12ca5706f6499f08cceaf8f1770)
+FILERPROVIDES_/usr/bin/setmetamode_kbd: elf(buildid) (= c65e1a3150b461cb03a485caca72399e7f0da49e)
+FILERPROVIDES_/usr/bin/loadunimap_kbd: elf(buildid) (= 0473b966aa720017922fb9d518dd5109310ce01f)
+FILERPROVIDES_/usr/bin/setleds_kbd: elf(buildid) (= d6334dbda2d8adb42580f0c556bf6d19e340fb53)
+FILERPROVIDES_/usr/bin/setkeycodes_kbd: elf(buildid) (= aa234e272e82a61be02d0a63633a996bbcfe51a2)
+FILERPROVIDES_/usr/bin/loadkeys_kbd: elf(buildid) (= ddcd3b58f7cf679362ca94785b88734ae9e15331)
+FILERPROVIDES_/usr/bin/deallocvt.kbd_kbd: elf(buildid) (= c53ba3ee3d183d21bed52842924bedb6d30dfb05) /usr/bin/deallocvt
+FILERPROVIDES_/usr/bin/kbd@underscore@mode_kbd: elf(buildid) (= af1ec81bd3e2d6f7bff4273b1f10461d2c50c279)
+FILERPROVIDES_/usr/bin/showconsolefont_kbd: elf(buildid) (= 2422bf83069f6d97e1161fd40d35e214386c4a76)
+FILERPROVIDES_/usr/bin/getkeycodes_kbd: elf(buildid) (= 2d89c956d9d7e7ab838630411c533a3dca9a5c89)
+FILERPROVIDES_/usr/bin/kbdrate_kbd: elf(buildid) (= 213ef036c54f1b185f8e627f0a3870049e2c6da7)
+FILERDEPENDSFLIST_kbd: /usr/bin/showkey /usr/bin/mapscrn /usr/bin/openvt.kbd /usr/bin/psfxtable /usr/bin/dumpkeys /usr/bin/setmetamode /usr/bin/setvtrgb /usr/bin/loadunimap /usr/bin/unicode@underscore@stop /usr/bin/kbdrate /usr/bin/fgconsole.kbd /usr/bin/setkeycodes /usr/bin/unicode@underscore@start /usr/bin/deallocvt.kbd /usr/bin/setleds /usr/bin/loadkeys /usr/bin/chvt.kbd /usr/bin/kbdinfo /usr/bin/getkeycodes /usr/bin/setfont /usr/bin/kbd@underscore@mode /usr/bin/showconsolefont
+FILERDEPENDS_/usr/bin/showkey_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/mapscrn_kbd: libc.so.6 libc.so.6(GLIBC_2.4) libc.so.6(GLIBC_2.7) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/openvt.kbd_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/psfxtable_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/dumpkeys_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/setmetamode_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/setvtrgb_kbd: libc.so.6 libc.so.6(GLIBC_2.4) libc.so.6(GLIBC_2.7) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/loadunimap_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/unicode@underscore@stop_kbd: /bin/sh
+FILERDEPENDS_/usr/bin/kbdrate_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/fgconsole.kbd_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/setkeycodes_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/unicode@underscore@start_kbd: /bin/sh
+FILERDEPENDS_/usr/bin/deallocvt.kbd_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/setleds_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/loadkeys_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/chvt.kbd_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/kbdinfo_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/getkeycodes_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/setfont_kbd: libc.so.6 libc.so.6(GLIBC_2.4) libc.so.6(GLIBC_2.7) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/kbd@underscore@mode_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/showconsolefont_kbd: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+PKGSIZE_kbd: 343771

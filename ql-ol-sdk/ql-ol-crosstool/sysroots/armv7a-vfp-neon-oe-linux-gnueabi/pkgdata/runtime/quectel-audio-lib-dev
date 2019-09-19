@@ -1,0 +1,16 @@
+PN: quectel-audio-lib
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-audio-lib-dev: Quectel audio lib  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY_quectel-audio-lib-dev: quectel-audio-lib version git-r1 - Development files
+RDEPENDS_quectel-audio-lib-dev: quectel-audio-lib (= git-r1)
+RRECOMMENDS_quectel-audio-lib-dev: adiertac-dev acdbrtac-dev system-core-liblog-dev alsa-intf-dev acdbloader-dev acdbmapper-dev glibc-dev time-genoff-dev glib-2.0-dev system-core-dev audioalsa-dev audcal-dev diag-dev
+SECTION_quectel-audio-lib-dev: devel
+PKG_quectel-audio-lib-dev: quectel-audio-lib-dev
+ALLOW_EMPTY_quectel-audio-lib-dev: 1
+FILES_quectel-audio-lib-dev: /usr/include /lib/lib*.so /usr/lib/lib*.so /usr/lib/*.la /usr/lib/*.o /usr/lib/pkgconfig /usr/share/pkgconfig /usr/share/aclocal /lib/*.o /usr/lib/quectel-audio-lib/*.la /lib/*.la
+FILES_INFO: {"/usr/include/ql_wav.h": 633, "/usr/include/audio_log.h": 2594, "/usr/lib/libql_lib_audio.la": 1580, "/usr/include/ql_mp3.h": 50, "/usr/include/ql_amr.h": 2605, "/usr/lib/libmad.so": 11, "/usr/include/ql_mixer.h": 1468, "/usr/include/amrFileCodec.h": 1591, "/usr/include/ql_lib_audio.h": 25243, "/usr/include/quectel-audio-lib.h": 3395, "/usr/lib/libql_lib_audio.so": 24}
+PKGSIZE_quectel-audio-lib-dev: 39194

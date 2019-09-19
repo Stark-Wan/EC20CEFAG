@@ -1,0 +1,16 @@
+PN: ql-time-daemon
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_ql-time-daemon-dev: Quectel time system  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY_ql-time-daemon-dev: ql-time-daemon version git-r1 - Development files
+RDEPENDS_ql-time-daemon-dev: ql-time-daemon (= git-r1)
+RRECOMMENDS_ql-time-daemon-dev: ql-syslog-dev glibc-dev qmi-framework-dev
+SECTION_ql-time-daemon-dev: devel
+PKG_ql-time-daemon-dev: ql-time-daemon-dev
+ALLOW_EMPTY_ql-time-daemon-dev: 1
+FILES_ql-time-daemon-dev: /usr/include /lib/lib*.so /usr/lib/lib*.so /usr/lib/*.la /usr/lib/*.o /usr/lib/pkgconfig /usr/share/pkgconfig /usr/share/aclocal /lib/*.o /usr/lib/ql-time-daemon/*.la /lib/*.la
+FILES_INFO: {}
+PKGSIZE_ql-time-daemon-dev: 0

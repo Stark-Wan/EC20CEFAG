@@ -1,0 +1,15 @@
+PN: ql-time-daemon
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_ql-time-daemon-dbg: Quectel time system  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY_ql-time-daemon-dbg: ql-time-daemon version git-r1 - Debugging files
+RRECOMMENDS_ql-time-daemon-dbg: ql-syslog-dbg qmi-framework-dbg glibc-dbg
+SECTION_ql-time-daemon-dbg: devel
+PKG_ql-time-daemon-dbg: ql-time-daemon-dbg
+ALLOW_EMPTY_ql-time-daemon-dbg: 1
+FILES_ql-time-daemon-dbg: /usr/bin/.debug /usr/sbin/.debug /usr/lib/ql-time-daemon/.debug /usr/lib/.debug /bin/.debug /sbin/.debug /lib/.debug /usr/lib/ql-time-daemon/.debug /usr/lib/matchbox-panel/.debug /usr/lib/ql-time-daemon/ql-time-daemon/.debug /usr/src/debug
+FILES_INFO: {"/usr/bin/.debug/ql_time_daemon": 121876}
+PKGSIZE_ql-time-daemon-dbg: 121876

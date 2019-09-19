@@ -1,0 +1,16 @@
+PN: quectel-mtdimg
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-mtdimg-dev: Quectel Function Daemon  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY_quectel-mtdimg-dev: quectel-mtdimg version git-r1 - Development files
+RDEPENDS_quectel-mtdimg-dev: quectel-mtdimg (= git-r1)
+RRECOMMENDS_quectel-mtdimg-dev: glibc-dev
+SECTION_quectel-mtdimg-dev: devel
+PKG_quectel-mtdimg-dev: quectel-mtdimg-dev
+ALLOW_EMPTY_quectel-mtdimg-dev: 1
+FILES_quectel-mtdimg-dev: /usr/include /lib/lib*.so /usr/lib/lib*.so /usr/lib/*.la /usr/lib/*.o /usr/lib/pkgconfig /usr/share/pkgconfig /usr/share/aclocal /lib/*.o /usr/lib/quectel-mtdimg/*.la /lib/*.la
+FILES_INFO: {}
+PKGSIZE_quectel-mtdimg-dev: 0

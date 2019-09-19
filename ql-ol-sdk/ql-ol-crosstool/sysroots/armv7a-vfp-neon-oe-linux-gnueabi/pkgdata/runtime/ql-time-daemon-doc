@@ -1,0 +1,13 @@
+PN: ql-time-daemon
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_ql-time-daemon-doc: Quectel time system  This package contains documentation.
+SUMMARY_ql-time-daemon-doc: ql-time-daemon version git-r1 - Documentation files
+SECTION_ql-time-daemon-doc: doc
+PKG_ql-time-daemon-doc: ql-time-daemon-doc
+FILES_ql-time-daemon-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc /usr/share/gnome/help
+FILES_INFO: {}
+PKGSIZE_ql-time-daemon-doc: 0

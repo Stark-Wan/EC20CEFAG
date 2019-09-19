@@ -1,0 +1,14 @@
+PN: linux-quic
+PV: git-quectel
+PR: r3
+PKGV: git-quectel
+PKGR: r3
+LICENSE: GPLv2
+DESCRIPTION_kernel-modules: Kernel modules meta package
+SUMMARY: linux-quic version git-quectel-r3
+RDEPENDS_kernel-modules: kernel-module-gpio-output kernel-module-mmc-block-test kernel-module-ql-lpm kernel-module-mmc-test kernel-module-qca8337 kernel-module-gpio-axis kernel-module-at803x kernel-module-quectel-phy kernel-module-quec-spi-chn kernel-module-gpio-matrix kernel-module-libphy kernel-module-gpio-event kernel-module-spidev kernel-module-gpio-input kernel-module-low-power-consume-driver-v2 kernel-module-xt-physdev kernel-module-cls-basic kernel-module-test-iosched kernel-module-af-key kernel-module-ansi-cprng kernel-module-of-mdio kernel-module-qcom-emac
+SECTION: base
+PKG_kernel-modules: kernel-modules
+ALLOW_EMPTY_kernel-modules: 1
+FILES_INFO: {}
+PKGSIZE_kernel-modules: 0

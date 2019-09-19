@@ -1,0 +1,13 @@
+PN: quectel-gps-handle
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel uart data dispatch
+SUMMARY: quectel-gps-handle version git-r1
+SECTION: base
+PKG_quectel-gps-handle-locale: quectel-gps-handle-locale
+FILES_quectel-gps-handle-locale: /usr/share/locale
+FILES_INFO: {}
+PKGSIZE_quectel-gps-handle-locale: 0

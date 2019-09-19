@@ -1,0 +1,16 @@
+PN: ql-manager
+PV: git
+PR: r21
+PKGV: git
+PKGR: r21
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_ql-manager-dev: Quectel Manager Modules  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY_ql-manager-dev: ql-manager version git-r21 - Development files
+RDEPENDS_ql-manager-dev: ql-manager (= git-r21)
+RRECOMMENDS_ql-manager-dev: adns-dev configdb-dev libnl-dev xmllib-dev libnl-genl-dev data-dev dsutils-dev time-genoff-dev qmi-dev ql-syslog-dev glib-2.0-dev qmi-framework-dev initscripts-dev ql-common-tools-dev glibc-dev diag-dev
+SECTION_ql-manager-dev: devel
+PKG_ql-manager-dev: ql-manager-dev
+ALLOW_EMPTY_ql-manager-dev: 1
+FILES_ql-manager-dev: /usr/include /lib/lib*.so /usr/lib/lib*.so /usr/lib/*.la /usr/lib/*.o /usr/lib/pkgconfig /usr/share/pkgconfig /usr/share/aclocal /lib/*.o /usr/lib/ql-manager/*.la /lib/*.la
+FILES_INFO: {"/usr/lib/libql_mgmt_client.la": 1580, "/usr/include/ql-manager/ql_manager_access_msgr_common_v01.h": 4535, "/usr/include/ql-manager/ql_manager_access_msgr_v01.h": 12155, "/usr/include/ql-manager/ql_mgmt_common.h": 5530, "/usr/lib/libql_mam_ipc.la": 937, "/usr/include/ql-manager/ql_manager_access_msgr_wifi_v01.h": 30250, "/usr/lib/libql_mgmt_client.so": 26, "/usr/include/ql-manager/ql_mgmt_data_call.h": 4631, "/usr/include/ql-manager/ql_manager_access_msgr_network_v01.h": 14831, "/usr/include/ql-manager/ql_mgmt_client.h": 11927, "/usr/include/ql-manager/ql_manager_access_msgr_data_call_v01.h": 13876, "/usr/include/ql-manager/ql_mgmt_wifi.h": 6563, "/usr/include/ql-manager/ql_mgmt_network.h": 3249, "/usr/lib/libql_mam_ipc.so": 22, "/usr/lib/pkgconfig/ql-manager.pc": 243}
+PKGSIZE_ql-manager-dev: 110355

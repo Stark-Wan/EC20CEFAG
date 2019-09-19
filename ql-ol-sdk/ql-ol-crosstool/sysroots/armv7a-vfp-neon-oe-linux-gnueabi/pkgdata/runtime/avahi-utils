@@ -1,0 +1,24 @@
+PN: avahi
+PV: 0.6.31
+PR: r12.0
+PKGV: 0.6.31
+PKGR: r12.0
+LICENSE: GPLv2+ & LGPLv2.1+
+DESCRIPTION: Avahi is a fully LGPL framework for Multicast DNS Service Discovery. It allows programs to publish and discover services and hosts running on a local network with no specific configuration. This tool implements IPv4LL, "Dynamic Configuration of IPv4 Link-Local Addresses" (IETF RFC3927), a protocol for automatic IP address configuration from the link-local 169.254.0.0/16 range without the need for a central server.
+SUMMARY: Avahi IPv4LL network address configuration daemon
+RDEPENDS_avahi-utils: libavahi-common (>= 0.6.31) glibc (>= 2.21) libavahi-client (>= 0.6.31)
+SECTION: network
+PKG_avahi-utils: avahi-utils
+FILES_avahi-utils: /usr/bin/avahi-*
+FILERPROVIDESFLIST_avahi-utils: /usr/bin/avahi-set-host-name /usr/bin/avahi-resolve /usr/bin/avahi-browse /usr/bin/avahi-publish
+FILES_INFO: {"/usr/bin/avahi-resolve-host-name": 13, "/usr/bin/avahi-resolve": 11088, "/usr/bin/avahi-browse": 17172, "/usr/bin/avahi-publish": 13304, "/usr/bin/avahi-publish-address": 13, "/usr/bin/avahi-resolve-address": 13, "/usr/bin/avahi-set-host-name": 8608, "/usr/bin/avahi-publish-service": 13, "/usr/bin/avahi-browse-domains": 12}
+FILERPROVIDES_/usr/bin/avahi-set-host-name_avahi-utils: elf(buildid) (= 5c75a26c4fb1a3aef6198b3d2666081ff0702593)
+FILERPROVIDES_/usr/bin/avahi-resolve_avahi-utils: elf(buildid) (= 99dc95cc07c88cc9d194515c589371c5006072bb)
+FILERPROVIDES_/usr/bin/avahi-browse_avahi-utils: elf(buildid) (= 448ab16e47cfd6738322d1b7ba633f7247905640)
+FILERPROVIDES_/usr/bin/avahi-publish_avahi-utils: elf(buildid) (= decd95d89c2db8c29f48690ca82cab83da78492e)
+FILERDEPENDSFLIST_avahi-utils: /usr/bin/avahi-set-host-name /usr/bin/avahi-resolve /usr/bin/avahi-browse /usr/bin/avahi-publish
+FILERDEPENDS_/usr/bin/avahi-set-host-name_avahi-utils: libavahi-client.so.3 libavahi-common.so.3 libc.so.6 libc.so.6(GLIBC_2.4) libpthread.so.0 libpthread.so.0(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/avahi-resolve_avahi-utils: libavahi-client.so.3 libavahi-common.so.3 libc.so.6 libc.so.6(GLIBC_2.4) libpthread.so.0 libpthread.so.0(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/avahi-browse_avahi-utils: libavahi-client.so.3 libavahi-common.so.3 libc.so.6 libc.so.6(GLIBC_2.4) libpthread.so.0 libpthread.so.0(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/avahi-publish_avahi-utils: libavahi-client.so.3 libavahi-common.so.3 libc.so.6 libc.so.6(GLIBC_2.4) libpthread.so.0 libpthread.so.0(GLIBC_2.4) rtld(GNU_HASH)
+PKGSIZE_avahi-utils: 50236

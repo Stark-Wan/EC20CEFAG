@@ -1,0 +1,14 @@
+PN: ql-time-daemon
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_ql-time-daemon-staticdev: Quectel time system  This package contains static libraries for software development.
+SUMMARY_ql-time-daemon-staticdev: ql-time-daemon version git-r1 - Development files (Static Libraries)
+RDEPENDS_ql-time-daemon-staticdev: ql-time-daemon-dev (= git-r1)
+SECTION_ql-time-daemon-staticdev: devel
+PKG_ql-time-daemon-staticdev: ql-time-daemon-staticdev
+FILES_ql-time-daemon-staticdev: /usr/lib/*.a /lib/*.a /usr/lib/ql-time-daemon/*.a
+FILES_INFO: {}
+PKGSIZE_ql-time-daemon-staticdev: 0

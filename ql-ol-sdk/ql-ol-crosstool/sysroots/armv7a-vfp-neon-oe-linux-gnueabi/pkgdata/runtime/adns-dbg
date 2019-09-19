@@ -1,0 +1,15 @@
+PN: adns
+PV: 1.5.1
+PR: r0
+PKGV: 1.5.1
+PKGR: r0
+LICENSE: GPL
+DESCRIPTION_adns-dbg: An advanced alternative, asynchronous resolver.  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY_adns-dbg: adns version 1.5.1-r0 - Debugging files
+RRECOMMENDS_adns-dbg: glibc-dbg
+SECTION_adns-dbg: devel
+PKG_adns-dbg: adns-dbg
+ALLOW_EMPTY_adns-dbg: 1
+FILES_adns-dbg: /usr/bin/.debug /usr/sbin/.debug /usr/lib/adns/.debug /usr/lib/.debug /bin/.debug /sbin/.debug /lib/.debug /usr/lib/adns/.debug /usr/lib/matchbox-panel/.debug /usr/lib/adns/adns/.debug /usr/src/debug
+FILES_INFO: {"/usr/bin/.debug/adnsresfilter": 9123, "/usr/bin/.debug/adnshost": 8697, "/usr/bin/.debug/adnsheloex": 6006, "/usr/bin/.debug/adnslogres": 6052, "/usr/lib/.debug/libadns.so.1.5": 21392}
+PKGSIZE_adns-dbg: 51270

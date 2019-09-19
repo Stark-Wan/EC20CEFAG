@@ -1,0 +1,15 @@
+PN: quectel-fsck-fat
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-fsck-fat-dbg: Quectel fsck.fat install  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY_quectel-fsck-fat-dbg: quectel-fsck-fat version git-r1 - Debugging files
+RRECOMMENDS_quectel-fsck-fat-dbg: libgcc-dbg glibc-dbg
+SECTION_quectel-fsck-fat-dbg: devel
+PKG_quectel-fsck-fat-dbg: quectel-fsck-fat-dbg
+ALLOW_EMPTY_quectel-fsck-fat-dbg: 1
+FILES_quectel-fsck-fat-dbg: /usr/bin/.debug /usr/sbin/.debug /usr/lib/quectel-fsck-fat/.debug /usr/lib/.debug /bin/.debug /sbin/.debug /lib/.debug /usr/lib/quectel-fsck-fat/.debug /usr/lib/matchbox-panel/.debug /usr/lib/quectel-fsck-fat/quectel-fsck-fat/.debug /usr/src/debug
+FILES_INFO: {"/sbin/.debug/fsck.fat": 139863}
+PKGSIZE_quectel-fsck-fat-dbg: 139863

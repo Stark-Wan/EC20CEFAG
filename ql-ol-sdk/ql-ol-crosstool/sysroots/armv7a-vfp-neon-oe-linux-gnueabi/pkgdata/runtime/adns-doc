@@ -1,0 +1,13 @@
+PN: adns
+PV: 1.5.1
+PR: r0
+PKGV: 1.5.1
+PKGR: r0
+LICENSE: GPL
+DESCRIPTION_adns-doc: An advanced alternative, asynchronous resolver.  This package contains documentation.
+SUMMARY_adns-doc: adns version 1.5.1-r0 - Documentation files
+SECTION_adns-doc: doc
+PKG_adns-doc: adns-doc
+FILES_adns-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc /usr/share/gnome/help
+FILES_INFO: {}
+PKGSIZE_adns-doc: 0

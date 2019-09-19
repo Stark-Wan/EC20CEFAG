@@ -1,0 +1,15 @@
+PN: quectel-config-ini
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-config-ini-dbg: quectel-config-ini version git-r1.  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY_quectel-config-ini-dbg: quectel-config-ini version git-r1 - Debugging files
+RRECOMMENDS_quectel-config-ini-dbg: glibc-dbg
+SECTION_quectel-config-ini-dbg: devel
+PKG_quectel-config-ini-dbg: quectel-config-ini-dbg
+ALLOW_EMPTY_quectel-config-ini-dbg: 1
+FILES_quectel-config-ini-dbg: /usr/bin/.debug /usr/sbin/.debug /usr/lib/quectel-config-ini/.debug /usr/lib/.debug /bin/.debug /sbin/.debug /lib/.debug /usr/lib/quectel-config-ini/.debug /usr/lib/matchbox-panel/.debug /usr/lib/quectel-config-ini/quectel-config-ini/.debug /usr/src/debug
+FILES_INFO: {"/usr/bin/.debug/tinylog": 9253}
+PKGSIZE_quectel-config-ini-dbg: 9253

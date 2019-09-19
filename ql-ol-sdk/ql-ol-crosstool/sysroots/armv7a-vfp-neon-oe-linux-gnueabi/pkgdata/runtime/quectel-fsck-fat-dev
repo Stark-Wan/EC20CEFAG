@@ -1,0 +1,16 @@
+PN: quectel-fsck-fat
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-fsck-fat-dev: Quectel fsck.fat install  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY_quectel-fsck-fat-dev: quectel-fsck-fat version git-r1 - Development files
+RDEPENDS_quectel-fsck-fat-dev: quectel-fsck-fat (= git-r1)
+RRECOMMENDS_quectel-fsck-fat-dev: libgcc-dev glibc-dev
+SECTION_quectel-fsck-fat-dev: devel
+PKG_quectel-fsck-fat-dev: quectel-fsck-fat-dev
+ALLOW_EMPTY_quectel-fsck-fat-dev: 1
+FILES_quectel-fsck-fat-dev: /usr/include /lib/lib*.so /usr/lib/lib*.so /usr/lib/*.la /usr/lib/*.o /usr/lib/pkgconfig /usr/share/pkgconfig /usr/share/aclocal /lib/*.o /usr/lib/quectel-fsck-fat/*.la /lib/*.la
+FILES_INFO: {}
+PKGSIZE_quectel-fsck-fat-dev: 0

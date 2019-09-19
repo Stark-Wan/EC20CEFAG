@@ -1,0 +1,14 @@
+PN: quectel-config-ini
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-config-ini-staticdev: quectel-config-ini version git-r1.  This package contains static libraries for software development.
+SUMMARY_quectel-config-ini-staticdev: quectel-config-ini version git-r1 - Development files (Static Libraries)
+RDEPENDS_quectel-config-ini-staticdev: quectel-config-ini-dev (= git-r1)
+SECTION_quectel-config-ini-staticdev: devel
+PKG_quectel-config-ini-staticdev: quectel-config-ini-staticdev
+FILES_quectel-config-ini-staticdev: /usr/lib/*.a /lib/*.a /usr/lib/quectel-config-ini/*.a
+FILES_INFO: {}
+PKGSIZE_quectel-config-ini-staticdev: 0

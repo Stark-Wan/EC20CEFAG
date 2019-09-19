@@ -1,0 +1,13 @@
+PN: quectel-config-ini
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: quectel-config-ini version git-r1.
+SUMMARY: quectel-config-ini version git-r1
+SECTION: base
+PKG_quectel-config-ini-locale: quectel-config-ini-locale
+FILES_quectel-config-ini-locale: /usr/share/locale
+FILES_INFO: {}
+PKGSIZE_quectel-config-ini-locale: 0

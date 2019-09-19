@@ -1,0 +1,77 @@
+# Copyright (c) 2016 Quectel Wireless Solutions Co., Ltd. All rights reserved.
+# Quectel Wireless Solutions Proprietary and Confidential.
+
+export CROSSTOOL_FLAG="1"
+export QUECTEL_PROJECT_NAME=EC20CE_FAG
+export QUECTEL_PROJECT_REV=EC20CEFAGR06A01M4G_OCPU_BYD
+export QUECTEL_FEATURE_OPENLINUX=OL
+echo -e "\033[33;1mQUECTEL_PROJECT_NAME      =EC20CE_FAG\033[0m"
+echo -e "\033[33;1mQUECTEL_PROJECT_REV       =EC20CEFAGR06A01M4G_OCPU_BYD\033[0m"
+echo -e "\033[33;1mQUECTEL_FEATURE_OPENLINUX       =OL\033[0m"
+
+export QL_SDKPATH=$(cd $(dirname ${BASH_SOURCE[0]}) && pwd)
+export QL_SDK_NATIVE_SYSROOT=${QL_SDKPATH}/sysroots/x86_64-oesdk-linux
+export QL_SDK_TARGET_SYSROOT="${QL_SDKPATH}/sysroots/armv7a-vfp-neon-oe-linux-gnueabi"
+
+######legacy env variables. please not use them######
+export SDKTARGETSYSROOT=${QL_SDK_TARGET_SYSROOT}
+export QL_OL_CROSSTOOL_PATH=${QL_SDKPATH}
+
+########Check Current SDKPATH#######
+${QL_SDKPATH}/scripts/ql_relocate_sdk.sh ${QL_SDKPATH} ${QL_SDK_NATIVE_SYSROOT}
+
+export PATH=${QL_SDK_NATIVE_SYSROOT}/usr/bin:${QL_SDK_NATIVE_SYSROOT}/usr/bin/arm-oe-linux-gnueabi:${QL_SDKPATH}/scripts:$PATH
+export CCACHE_PATH=\${QL_SDK_NATIVE_SYSROOT}/usr/bin:\${QL_SDK_NATIVE_SYSROOT}/usr/bin/arm-oe-linux-gnueabi:$CCACHE_PATH
+
+export CC="arm-oe-linux-gnueabi-gcc  -march=armv7-a -mfloat-abi=softfp -mfpu=neon"
+export CXX="arm-oe-linux-gnueabi-g++  -march=armv7-a -mfloat-abi=softfp -mfpu=neon"
+export CPP="arm-oe-linux-gnueabi-gcc -E  -march=armv7-a -mfloat-abi=softfp -mfpu=neon"
+export AS="arm-oe-linux-gnueabi-as "
+export LD="arm-oe-linux-gnueabi-ld "
+export GDB=arm-oe-linux-gnueabi-gdb
+export STRIP=arm-oe-linux-gnueabi-strip
+export RANLIB=arm-oe-linux-gnueabi-ranlib
+export OBJCOPY=arm-oe-linux-gnueabi-objcopy
+export OBJDUMP=arm-oe-linux-gnueabi-objdump
+export AR=arm-oe-linux-gnueabi-ar
+export NM=arm-oe-linux-gnueabi-nm
+export M4=m4
+
+export TARGET_PREFIX=arm-oe-linux-gnueabi-
+export CONFIGURE_FLAGS="--target=arm-oe-linux-gnueabi --host=arm-oe-linux-gnueabi --build=x86_64-linux --with-libtool-sysroot=$SDKTARGETSYSROOT"
+export CFLAGS=" -O2 -fexpensive-optimizations -frename-registers -fomit-frame-pointer -include quectel-features-config.h"
+export CXXFLAGS=" -O2 -fexpensive-optimizations -frename-registers -fomit-frame-pointer -include quectel-features-config.h"
+export LDFLAGS="-Wl,-O1 -Wl,--hash-style=gnu -Wl,--as-needed"
+export CPPFLAGS=""
+export KCFLAGS="--sysroot=$SDKTARGETSYSROOT"
+export ARCH=arm
+export CROSS_COMPILE=arm-oe-linux-gnueabi-
+
+#export PYTHONHOME=${QL_SDK_NATIVE_SYSROOT}/usr
+#export PKG_CONFIG_SYSROOT_DIR=${QL_SDK_TARGET_SYSROOT}
+#export PKG_CONFIG_PATH=${QL_SDK_TARGET_SYSROOT}/usr/lib/pkgconfig
+export CONFIG_SITE=${QL_SDK_NATIVE_SYSROOT}/site-config-armv7a-vfp-neon-oe-linux-gnueabi
+export CONFIGURE_FLAGS="--target=arm-oe-linux-gnueabi --host=arm-oe-linux-gnueabi --build=x86_64-linux --with-libtool-sysroot=${QL_SDK_TARGET_SYSROOT}"
+
+export OECORE_NATIVE_SYSROOT="${QL_SDKPATH}/sysroots/x86_64-oesdk-linux"
+export OECORE_TARGET_SYSROOT="${QL_SDK_TARGET_SYSROOT}"
+export OECORE_ACLOCAL_OPTS="-I ${QL_SDK_NATIVE_SYSROOT}/usr/share/aclocal"
+export OECORE_DISTRO_VERSION="201908091400"
+export OECORE_SDK_VERSION="nodistro.0"
+
+export QL_FAKEROOT=1
+
+if [[ ! -d "${QL_SDKPATH}/../ql-ol-rootfs" && -f "${QL_SDKPATH}/../ql-ol-rootfs.tar.gz" ]]; then
+    printf "Extracting the rootfs..."
+    mkdir -p ${QL_SDKPATH}/../ql-ol-rootfs
+    ql_fakeroot tar -xzf ${QL_SDKPATH}/../ql-ol-rootfs.tar.gz -C ${QL_SDKPATH}/../ql-ol-rootfs
+    echo "Done."
+fi
+
+if [[ ! -d "${QL_SDKPATH}/../ql-ol-recoveryfs" && -f "${QL_SDKPATH}/../ql-ol-recoveryfs.tar.gz" ]]; then
+    printf "Extracting the recoveryfs..."
+    mkdir -p ${QL_SDKPATH}/../ql-ol-recoveryfs
+    ql_fakeroot tar -xzf ${QL_SDKPATH}/../ql-ol-recoveryfs.tar.gz -C ${QL_SDKPATH}/../ql-ol-recoveryfs
+    echo "Done."
+fi
+

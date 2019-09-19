@@ -1,0 +1,13 @@
+PN: ql-time-daemon
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel time system
+SUMMARY: ql-time-daemon version git-r1
+SECTION: base
+PKG_ql-time-daemon-locale: ql-time-daemon-locale
+FILES_ql-time-daemon-locale: /usr/share/locale
+FILES_INFO: {}
+PKGSIZE_ql-time-daemon-locale: 0

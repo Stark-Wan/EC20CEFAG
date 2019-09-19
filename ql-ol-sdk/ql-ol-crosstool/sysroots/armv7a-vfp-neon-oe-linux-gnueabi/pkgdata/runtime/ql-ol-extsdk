@@ -1,0 +1,20 @@
+PN: ql-ol-extsdk
+PV: git
+PR: r01
+PKGV: git
+PKGR: r01
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel High Data Open API
+SUMMARY: ql-ol-extsdk version git-r01
+RDEPENDS_ql-ol-extsdk: adns (>= 1.5.1) mcm-core (>= git-invalidgit) qmi (>= git-invalidgit) alsa-intf (>= git-invalidgit) data (>= git-invalidgit) data-oss (>= git) audioalsa (>= git) adiertac (>= git-invalidgit) libcurl (>= 7.40.0) diag (>= git-invalidgit) glibc (>= 2.21) glib-2.0 (>= 2.42.1) configdb (>= git-invalidgit) system-core-liblog (>= git) gmp (>= 6.0.0) acdbloader (>= git-invalidgit) ql-syslog (>= git) qmi-framework (>= git-invalidgit) acdbmapper (>= git-invalidgit) acdbrtac (>= git-invalidgit) dsutils (>= git-invalidgit) xmllib (>= git-invalidgit) gnutls (>= 3.3.12) ql-common-tools (>= git) audcal (>= git-invalidgit) quectel-audio-lib (>= git) libstdc++ (>= 4.9.2) qmi-client-helper (>= git-invalidgit) zlib (>= 1.2.8) ql-manager (>= git) nettle (>= 2.7.1) time-genoff (>= git-invalidgit)
+SECTION: base
+PKG_ql-ol-extsdk: ql-ol-extsdk
+FILES_ql-ol-extsdk: /usr/bin/* /usr/sbin/* /usr/lib/ql-ol-extsdk/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/ql-ol-extsdk /usr/lib/ql-ol-extsdk/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers
+FILERPROVIDESFLIST_ql-ol-extsdk: /usr/lib/libql@underscore@peripheral.so.0.0.0 /usr/lib/libql@underscore@common@underscore@api.so.0.0.0
+FILES_INFO: {"/usr/lib/libql_peripheral.so.0": 28768, "/usr/lib/libql_common_api.so.0": 270412}
+FILERPROVIDES_/usr/lib/libql@underscore@peripheral.so.0.0.0_ql-ol-extsdk: elf(buildid) (= b36b437ad65caae8ed8ca832773332a25299aae0) libql_peripheral.so.0
+FILERPROVIDES_/usr/lib/libql@underscore@common@underscore@api.so.0.0.0_ql-ol-extsdk: elf(buildid) (= 65d0a144607bae9852f16c1b7dce262f9a08579e) libql_common_api.so.0
+FILERDEPENDSFLIST_ql-ol-extsdk: /usr/lib/libql@underscore@peripheral.so.0.0.0 /usr/lib/libql@underscore@common@underscore@api.so.0.0.0
+FILERDEPENDS_/usr/lib/libql@underscore@peripheral.so.0.0.0_ql-ol-extsdk: libc.so.6 libc.so.6(GLIBC_2.4) libc.so.6(GLIBC_2.7) libc.so.6(GLIBC_2.9) libconfigdb.so.0 libdiag.so.1 libdsi_netctrl.so.0 libdsutils.so.1 libglib-2.0.so.0 libgthread-2.0.so.0 libnetmgr.so.0 libpthread.so.0 libpthread.so.0(GLIBC_2.4) libqcmap_client.so.1 libqcmapipc.so.1 libqdi.so.0 libql_sys_log.so.1 libqmi.so.1 libqmi_cci.so.1 libqmi_client_helper.so.1 libqmi_client_qmux.so.1 libqmi_common_so.so.1 libqmi_csi.so.1 libqmi_encdec.so.1 libqmi_sap.so.1 libqmiidl.so.1 libqmiservices.so.1 librmnetctl.so.0 librt.so.1 libstdc++.so.6 libtime_genoff.so.1 libxml.so.0 rtld(GNU_HASH)
+FILERDEPENDS_/usr/lib/libql@underscore@common@underscore@api.so.0.0.0_ql-ol-extsdk: libacdbloader.so.1 libacdbmapper.so.1 libacdbrtac.so.1 libadiertac.so.1 libadns.so.1 libalsa_intf.so.1 libaudcal.so.1 libaudioalsa.so.1 libc.so.6 libc.so.6(GLIBC_2.4) libc.so.6(GLIBC_2.7) libconfigdb.so.0 libcurl.so.5 libdiag.so.1 libdsi_netctrl.so.0 libdsutils.so.1 libeloop.so.1 libglib-2.0.so.0 libgmp.so.10 libgnutls.so.28 libgthread-2.0.so.0 libhogweed.so.2 liblog.so.0 libm.so.6 libmad.so.0 libmcm.so.0 libmcm_log_util.so.0 libmcmipc.so.0 libnetmgr.so.0 libnettle.so.4 libpthread.so.0 libpthread.so.0(GLIBC_2.4) libqcmap_client.so.1 libqcmapipc.so.1 libqdi.so.0 libql_lib_audio.so.1 libql_log.so.1 libql_mam_ipc.so.1 libql_mgmt_client.so.1 libql_sys_log.so.1 libql_utils.so.1 libqmi.so.1 libqmi_cci.so.1 libqmi_client_helper.so.1 libqmi_client_qmux.so.1 libqmi_common_so.so.1 libqmi_csi.so.1 libqmi_encdec.so.1 libqmi_sap.so.1 libqmiidl.so.1 libqmiservices.so.1 librmnetctl.so.0 librt.so.1 librt.so.1(GLIBC_2.4) libstdc++.so.6 libtime_genoff.so.1 libxml.so.0 libz.so.1 rtld(GNU_HASH)
+PKGSIZE_ql-ol-extsdk: 299180

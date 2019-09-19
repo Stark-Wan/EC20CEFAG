@@ -1,0 +1,18 @@
+PN: quectel-fotainfo
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel Function Daemon
+SUMMARY: quectel-fotainfo version git-r1
+RDEPENDS_quectel-fotainfo: glibc (>= 2.21) quectel-libfotainfo (>= git)
+SECTION: base
+PKG_quectel-fotainfo: quectel-fotainfo
+FILES_quectel-fotainfo: /usr/bin/* /usr/sbin/* /usr/lib/quectel-fotainfo/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/quectel-fotainfo /usr/lib/quectel-fotainfo/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers
+FILERPROVIDESFLIST_quectel-fotainfo: /usr/bin/fotainfo
+FILES_INFO: {"/usr/bin/fotainfo": 7764}
+FILERPROVIDES_/usr/bin/fotainfo_quectel-fotainfo: elf(buildid) (= 9b4275dd86a87dec00a673c1bffc96a13ecce289)
+FILERDEPENDSFLIST_quectel-fotainfo: /usr/bin/fotainfo
+FILERDEPENDS_/usr/bin/fotainfo_quectel-fotainfo: libc.so.6 libc.so.6(GLIBC_2.4) libfotainfo.so.1 rtld(GNU_HASH)
+PKGSIZE_quectel-fotainfo: 7764

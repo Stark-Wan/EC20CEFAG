@@ -1,0 +1,15 @@
+PN: linux-quic
+PV: git-quectel
+PR: r3
+PKGV: git-quectel
+PKGR: r3
+LICENSE: GPLv2
+DESCRIPTION: QuIC Linux Kernel
+SUMMARY: linux-quic version git-quectel-r3
+SECTION: base
+PKG_kernel-vmlinux: kernel-vmlinux
+FILES_kernel-vmlinux: /boot/vmlinux*
+FILERPROVIDESFLIST_kernel-vmlinux: /boot/vmlinux-3.18.20
+FILES_INFO: {"/boot/vmlinux-3.18.20": 122652988}
+FILERPROVIDES_/boot/vmlinux-3.18.20_kernel-vmlinux: elf(buildid) (= a177ea8b2aea5a57a4c68ce70e6479fdf20d83f3)
+PKGSIZE_kernel-vmlinux: 122652988

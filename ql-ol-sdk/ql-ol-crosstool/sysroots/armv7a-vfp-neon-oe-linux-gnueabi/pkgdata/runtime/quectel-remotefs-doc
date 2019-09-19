@@ -1,0 +1,13 @@
+PN: quectel-remotefs
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-remotefs-doc: Quectel RemoteFs Service  This package contains documentation.
+SUMMARY_quectel-remotefs-doc: quectel-remotefs version git-r1 - Documentation files
+SECTION_quectel-remotefs-doc: doc
+PKG_quectel-remotefs-doc: quectel-remotefs-doc
+FILES_quectel-remotefs-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc /usr/share/gnome/help
+FILES_INFO: {}
+PKGSIZE_quectel-remotefs-doc: 0

@@ -1,0 +1,26 @@
+PN: adns
+PV: 1.5.1
+PR: r0
+PKGV: 1.5.1
+PKGR: r0
+LICENSE: GPL
+DESCRIPTION: An advanced alternative, asynchronous resolver.
+SUMMARY: adns version 1.5.1-r0
+RDEPENDS_adns: glibc (>= 2.21)
+SECTION: console/network
+PKG_adns: adns
+FILES_adns: /usr/bin/* /usr/sbin/* /usr/lib/adns/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/adns /usr/lib/adns/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers
+FILERPROVIDESFLIST_adns: /usr/bin/adnsheloex /usr/bin/adnshost /usr/bin/adnsresfilter /usr/lib/libadns.so.1.5 /usr/bin/adnslogres
+FILES_INFO: {"/usr/bin/adnsresfilter": 11636, "/usr/bin/adnshost": 21708, "/usr/bin/adnsheloex": 8492, "/usr/bin/adnslogres": 8380, "/usr/lib/libadns.so.1": 81812}
+FILERPROVIDES_/usr/bin/adnsheloex_adns: elf(buildid) (= a5cfb290182dfd1dfa6595ff63529f717860f55d)
+FILERPROVIDES_/usr/bin/adnshost_adns: elf(buildid) (= 360055472f9c79acc1c471eaf77b27bbb9dbf7d4)
+FILERPROVIDES_/usr/bin/adnsresfilter_adns: elf(buildid) (= b19917c0167e0542606156b433c6f2b2458f4704)
+FILERPROVIDES_/usr/lib/libadns.so.1.5_adns: elf(buildid) (= fa6efa8de159942d2257a5f80e8a933267cacd6a) libadns.so.1
+FILERPROVIDES_/usr/bin/adnslogres_adns: elf(buildid) (= 027064c481fbf58f07c133462963aeb461419ece)
+FILERDEPENDSFLIST_adns: /usr/bin/adnsheloex /usr/bin/adnshost /usr/bin/adnsresfilter /usr/lib/libadns.so.1.5 /usr/bin/adnslogres
+FILERDEPENDS_/usr/bin/adnsheloex_adns: libadns.so.1 libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/adnshost_adns: libadns.so.1 libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/adnsresfilter_adns: libadns.so.1 libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/lib/libadns.so.1.5_adns: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/adnslogres_adns: libadns.so.1 libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+PKGSIZE_adns: 132028

@@ -1,0 +1,15 @@
+PN: data
+PV: git-invalidgit
+PR: r21
+PKGV: git-invalidgit
+PKGR: r21
+LICENSE: Qualcomm-Technologies-Inc.-Proprietary
+DESCRIPTION_data-dbg: Qualcomm Technologies Data Modules (Excluding ConfigDB and DSUtils)  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY_data-dbg: data version git-invalidgit-r21 - Debugging files
+RRECOMMENDS_data-dbg: dsutils-dbg glibc-dbg qmi-client-helper-dbg configdb-dbg libstdc++-dbg diag-dbg time-genoff-dbg data-oss-dbg pugixml-dbg ql-syslog-dbg glib-2.0-dbg libgcc-dbg qmi-framework-dbg xmllib-dbg qmi-dbg
+SECTION_data-dbg: devel
+PKG_data-dbg: data-dbg
+ALLOW_EMPTY_data-dbg: 1
+FILES_data-dbg: /usr/bin/.debug /usr/sbin/.debug /usr/lib/data/.debug /usr/lib/.debug /bin/.debug /sbin/.debug /lib/.debug /usr/lib/data/.debug /usr/lib/matchbox-panel/.debug /usr/lib/data/data/.debug /usr/src/debug  /usr/tests/.debug                      /WEBSERVER/www/cgi-bin/.debug 
+FILES_INFO: {"/usr/bin/.debug/eMBMs_TunnelingModule": 66341, "/usr/lib/.debug/libdsi_netctrl.so.0.0.0": 1016228, "/usr/lib/.debug/libqcmap_client.so.1.0.0": 342189, "/usr/bin/.debug/QCMAP_StaInterface": 14276, "/WEBSERVER/www/cgi-bin/.debug/qcmap_web_cgi": 17138, "/usr/bin/.debug/qti": 280737, "/usr/lib/.debug/libqdp.so.0.0.0": 28040, "/usr/tests/.debug/dsi_netctrl_test": 58342, "/WEBSERVER/www/cgi-bin/.debug/qcmap_auth": 27671, "/usr/lib/.debug/libqcmapipc.so.1.0.0": 20425, "/usr/lib/.debug/libqcmap_cm.so.1.0.0": 269553, "/usr/lib/.debug/libnetmgr.so.0.0.0": 186499, "/usr/bin/.debug/netmgrd": 1214610, "/usr/bin/.debug/portal_ctl": 17861, "/usr/bin/.debug/ipacm_perf": 90987, "/usr/bin/.debug/QCMAP_Web_CLIENT": 177252, "/usr/bin/.debug/QCMAP_CLI": 126876, "/usr/bin/.debug/radish": 156626, "/usr/bin/.debug/qmi_ip_multiclient": 263243, "/usr/lib/.debug/libqdi.so.0.0.0": 244773, "/usr/bin/.debug/portal_gateway": 244864, "/usr/bin/.debug/ipacmdiag": 14192, "/usr/bin/.debug/qti_ppp": 93337, "/usr/lib/.debug/libqmi_ip.so.1.0.0": 4572, "/usr/bin/.debug/QCMAP_ConnectionManager": 2147024, "/usr/lib/.debug/libqcmaputils.so.1.0.0": 6906}
+PKGSIZE_data-dbg: 7130562

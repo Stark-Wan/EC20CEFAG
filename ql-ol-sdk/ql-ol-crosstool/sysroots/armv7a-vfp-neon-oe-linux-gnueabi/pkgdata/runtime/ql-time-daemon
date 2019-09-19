@@ -1,0 +1,19 @@
+PN: ql-time-daemon
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel time system
+SUMMARY: ql-time-daemon version git-r1
+RDEPENDS_ql-time-daemon: qmi-framework (>= git-invalidgit) glibc (>= 2.21) ql-syslog (>= git)
+SECTION: base
+PKG_ql-time-daemon: ql-time-daemon
+FILES_ql-time-daemon: /usr/bin/* /usr/sbin/* /usr/lib/ql-time-daemon/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/ql-time-daemon /usr/lib/ql-time-daemon/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers
+FILERPROVIDESFLIST_ql-time-daemon: /usr/bin/ql@underscore@time@underscore@daemon
+FILES_INFO: {"/etc/init.d/start_ql_time_daemon": 642, "/usr/bin/ql_time_daemon": 39676, "/etc/ql_time_conf.json": 571}
+FILERPROVIDES_/usr/bin/ql@underscore@time@underscore@daemon_ql-time-daemon: elf(buildid) (= ff37ce2966f71fb13544131c044b838492135781)
+FILERDEPENDSFLIST_ql-time-daemon: /usr/bin/ql@underscore@time@underscore@daemon /etc/init.d/start@underscore@ql@underscore@time@underscore@daemon
+FILERDEPENDS_/usr/bin/ql@underscore@time@underscore@daemon_ql-time-daemon: libc.so.6 libc.so.6(GLIBC_2.17) libc.so.6(GLIBC_2.4) libc.so.6(GLIBC_2.7) libpthread.so.0 libpthread.so.0(GLIBC_2.4) libql_sys_log.so.1 libqmi_cci.so.1 libqmi_common_so.so.1 rtld(GNU_HASH)
+FILERDEPENDS_/etc/init.d/start@underscore@ql@underscore@time@underscore@daemon_ql-time-daemon: /bin/sh
+PKGSIZE_ql-time-daemon: 40889

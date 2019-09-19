@@ -1,0 +1,17 @@
+PN: glibc
+PV: 2.21
+PR: r0
+PKGV: 2.21
+PKGR: r0
+LICENSE: GPLv2 & LGPLv2.1
+DESCRIPTION_glibc-dbg: The GNU C Library is used as the system C library in most systems with the Linux kernel.  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY_glibc-dbg: GLIBC (GNU C Library) - Debugging files
+RPROVIDES_glibc-dbg: eglibc-dbg libc-dbg glibc-dbg
+RREPLACES_glibc-dbg:  libc-dbg
+RCONFLICTS_glibc-dbg:  libc-dbg
+SECTION_glibc-dbg: devel
+PKG_glibc-dbg: libc6-dbg
+ALLOW_EMPTY_glibc-dbg: 1
+FILES_glibc-dbg: /usr/bin/.debug /usr/sbin/.debug /usr/lib/glibc/.debug /usr/lib/.debug /bin/.debug /sbin/.debug /lib/.debug /usr/lib/glibc/.debug /usr/lib/matchbox-panel/.debug /usr/lib/glibc/glibc/.debug /usr/src/debug /usr/lib/glibc/*/.debug /usr/lib/audit/.debug
+FILES_INFO: {"/usr/bin/.debug/getent": 9865, "/lib/.debug/libresolv-2.21.so": 19974, "/lib/.debug/libnss_nis-2.21.so": 12846, "/lib/.debug/libnss_files-2.21.so": 14014, "/sbin/.debug/sln": 94052, "/lib/.debug/libdl-2.21.so": 7061, "/lib/.debug/libnss_nisplus-2.21.so": 14038, "/lib/.debug/libBrokenLocale-2.21.so": 4418, "/usr/bin/.debug/rpcgen": 12817, "/lib/.debug/libpcprofile.so": 4698, "/lib/.debug/libnss_dns-2.21.so": 6659, "/usr/sbin/.debug/nscd": 28537, "/usr/bin/.debug/gencat": 9930, "/usr/bin/.debug/pcprofiledump": 6206, "/lib/.debug/libSegFault.so": 5211, "/usr/sbin/.debug/zic": 19447, "/lib/.debug/ld-2.21.so": 38034, "/usr/bin/.debug/iconv": 14129, "/lib/.debug/libmemusage.so": 9044, "/lib/.debug/libnsl-2.21.so": 23692, "/usr/lib/audit/.debug/sotruss-lib.so": 5325, "/usr/bin/.debug/locale": 12313, "/usr/sbin/.debug/zdump": 15471, "/usr/sbin/.debug/iconvconfig": 11111, "/lib/.debug/libanl-2.21.so": 7156, "/lib/.debug/libnss_compat-2.21.so": 9772, "/lib/.debug/libc-2.21.so": 335486, "/lib/.debug/libm-2.21.so": 64566, "/usr/bin/.debug/sprof": 12981, "/lib/.debug/libnss_hesiod-2.21.so": 7574, "/lib/.debug/libcrypt-2.21.so": 8608, "/lib/.debug/libnss_db-2.21.so": 7466, "/usr/bin/.debug/makedb": 10523, "/lib/.debug/librt-2.21.so": 14783, "/lib/.debug/libcidn-2.21.so": 10731, "/lib/.debug/libpthread-2.21.so": 49197, "/usr/bin/.debug/pldd": 7135, "/lib/.debug/libthread_db-1.0.so": 12415, "/lib/.debug/libutil-2.21.so": 6029, "/usr/bin/.debug/getconf": 6227}
+PKGSIZE_glibc-dbg: 969541

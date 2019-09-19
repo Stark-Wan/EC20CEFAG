@@ -1,0 +1,13 @@
+PN: quectel-daemon
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel Function Daemon
+SUMMARY: quectel-daemon version git-r1
+SECTION: base
+PKG_quectel-daemon-locale: quectel-daemon-locale
+FILES_quectel-daemon-locale: /usr/share/locale
+FILES_INFO: {}
+PKGSIZE_quectel-daemon-locale: 0

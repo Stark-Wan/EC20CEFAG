@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib
+includedir=/usr/include
+
+Name: libkmod
+Description: Library to deal with kernel modules
+Version: 19
+Libs: -L${libdir} -lkmod
+Libs.private:  -L/home/q/anisa_nvme/anisa_test/Qualcomm/MDM9x07/OpenLinux/LE.1.0.c3/Customers/R06_b1_BYD/apps_proc/oe-core/build/tmp-glibc/sysroots/mdm9607-perf/usr/lib -lz 
+Cflags: -I${includedir}

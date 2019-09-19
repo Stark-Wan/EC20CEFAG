@@ -1,0 +1,13 @@
+PN: ql-syslog
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel log system
+SUMMARY: ql-syslog version git-r1
+SECTION: base
+PKG_ql-syslog-locale: ql-syslog-locale
+FILES_ql-syslog-locale: /usr/share/locale
+FILES_INFO: {}
+PKGSIZE_ql-syslog-locale: 0

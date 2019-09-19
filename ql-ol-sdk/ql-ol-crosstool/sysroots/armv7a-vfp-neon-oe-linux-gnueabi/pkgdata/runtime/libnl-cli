@@ -1,0 +1,45 @@
+PN: libnl
+PE: 1
+PV: 3.2.25
+PR: r1
+PKGE: 1
+PKGV: 3.2.25
+PKGR: r1
+LICENSE: LGPLv2.1
+DESCRIPTION: A library for applications dealing with netlink sockets.
+SUMMARY: A library for applications dealing with netlink sockets
+RDEPENDS_libnl-cli: libnl-nf (>= 3.2.25) libnl (>= 3.2.25) libnl-genl (>= 3.2.25) libnl-route (>= 3.2.25) glibc (>= 2.21)
+RPROVIDES_libnl-cli:  libnl-cli
+SECTION: libs/network
+PKG_libnl-cli: libnl-3-cli
+FILES_libnl-cli: /usr/lib/libnl-cli-3.so.*                      /usr/lib/libnl/cli/*/*.so.*                      /usr/sbin/nl-*
+FILERPROVIDESFLIST_libnl-cli: /usr/sbin/nl-pktloc-lookup /usr/sbin/nl-link-list /usr/sbin/nl-qdisc-add /usr/sbin/nl-class-list /usr/sbin/nl-cls-delete /usr/sbin/nl-qdisc-list /usr/sbin/nl-cls-list /usr/sbin/nl-cls-add /usr/sbin/nl-class-add /usr/sbin/nl-classid-lookup /usr/sbin/nl-qdisc-delete /usr/sbin/nl-class-delete /usr/lib/libnl-cli-3.so.200.20.0
+FILES_INFO: {"/usr/sbin/nl-pktloc-lookup": 6232, "/usr/sbin/nl-link-list": 6340, "/usr/sbin/nl-qdisc-add": 7080, "/usr/sbin/nl-class-list": 6312, "/usr/sbin/nl-cls-delete": 7324, "/usr/sbin/nl-qdisc-list": 7240, "/usr/lib/libnl-cli-3.so.200": 31504, "/usr/sbin/nl-cls-list": 6440, "/usr/sbin/nl-cls-add": 8040, "/usr/sbin/nl-classid-lookup": 4964, "/usr/sbin/nl-qdisc-delete": 6708, "/usr/sbin/nl-class-delete": 6600, "/usr/sbin/nl-class-add": 7608}
+FILERPROVIDES_/usr/sbin/nl-pktloc-lookup_libnl-cli: elf(buildid) (= 3d312e9014837395aca468f717f8d9e8bf388688)
+FILERPROVIDES_/usr/sbin/nl-link-list_libnl-cli: elf(buildid) (= 03b3187dc931eaf7b7c879b5f2845acc8da62b55)
+FILERPROVIDES_/usr/sbin/nl-qdisc-add_libnl-cli: elf(buildid) (= 02aef7574d984ba233d7f85665591d1cf21615df)
+FILERPROVIDES_/usr/sbin/nl-class-list_libnl-cli: elf(buildid) (= ad085b888df1163ceb7b1a9e4dc8248a563facb3)
+FILERPROVIDES_/usr/sbin/nl-cls-delete_libnl-cli: elf(buildid) (= b0bb950e3066053c104e5b605930492f023c5cfb)
+FILERPROVIDES_/usr/sbin/nl-qdisc-list_libnl-cli: elf(buildid) (= 57684223497b36b11c905512645b585eb7bda421)
+FILERPROVIDES_/usr/sbin/nl-cls-list_libnl-cli: elf(buildid) (= a6a18baffb53828be5b7fe7d25761e0937b10456)
+FILERPROVIDES_/usr/sbin/nl-cls-add_libnl-cli: elf(buildid) (= 4a9bf13e649ebb0c6ffe0740fce7325d4555a011)
+FILERPROVIDES_/usr/sbin/nl-class-add_libnl-cli: elf(buildid) (= 34d65143229cc2f3f7aeeebd34e8c058b85fbca8)
+FILERPROVIDES_/usr/sbin/nl-classid-lookup_libnl-cli: elf(buildid) (= 75617878d30266a74c1e69f6063794fc994f696a)
+FILERPROVIDES_/usr/sbin/nl-qdisc-delete_libnl-cli: elf(buildid) (= 48289b72169b244fda17c05a9afb3ebe92c5c306)
+FILERPROVIDES_/usr/sbin/nl-class-delete_libnl-cli: elf(buildid) (= 489f72cb4b46ed9f44c66c10b1aa43dc14925ba4)
+FILERPROVIDES_/usr/lib/libnl-cli-3.so.200.20.0_libnl-cli: elf(buildid) (= 897c3cc2b76aaa5ded678c48172b0cb8c65dd12a) libnl-cli-3.so.200
+FILERDEPENDSFLIST_libnl-cli: /usr/sbin/nl-pktloc-lookup /usr/sbin/nl-link-list /usr/sbin/nl-qdisc-add /usr/sbin/nl-class-list /usr/sbin/nl-cls-delete /usr/sbin/nl-qdisc-list /usr/sbin/nl-cls-list /usr/sbin/nl-cls-add /usr/sbin/nl-class-add /usr/sbin/nl-classid-lookup /usr/sbin/nl-qdisc-delete /usr/sbin/nl-class-delete /usr/lib/libnl-cli-3.so.200.20.0
+FILERDEPENDS_/usr/sbin/nl-pktloc-lookup_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-link-list_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-qdisc-add_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-class-list_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-cls-delete_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-qdisc-list_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-cls-list_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-cls-add_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-class-add_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-classid-lookup_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-qdisc-delete_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/sbin/nl-class-delete_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-cli-3.so.200 libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) rtld(GNU_HASH)
+FILERDEPENDS_/usr/lib/libnl-cli-3.so.200.20.0_libnl-cli: libc.so.6 libc.so.6(GLIBC_2.4) libdl.so.2 libdl.so.2(GLIBC_2.4) libm.so.6 libnl-3.so.200 libnl-3.so.200(libnl_3) libnl-genl-3.so.200 libnl-nf-3.so.200 libnl-nf-3.so.200(libnl_3) libnl-route-3.so.200 libnl-route-3.so.200(libnl_3) libpthread.so.0 libpthread.so.0(GLIBC_2.4) rtld(GNU_HASH)
+PKGSIZE_libnl-cli: 112392

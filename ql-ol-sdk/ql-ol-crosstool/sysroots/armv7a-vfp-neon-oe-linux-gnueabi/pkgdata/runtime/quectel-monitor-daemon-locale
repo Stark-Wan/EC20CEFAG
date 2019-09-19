@@ -1,0 +1,13 @@
+PN: quectel-monitor-daemon
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel monitor daemon
+SUMMARY: quectel-monitor-daemon version git-r1
+SECTION: base
+PKG_quectel-monitor-daemon-locale: quectel-monitor-daemon-locale
+FILES_quectel-monitor-daemon-locale: /usr/share/locale
+FILES_INFO: {}
+PKGSIZE_quectel-monitor-daemon-locale: 0

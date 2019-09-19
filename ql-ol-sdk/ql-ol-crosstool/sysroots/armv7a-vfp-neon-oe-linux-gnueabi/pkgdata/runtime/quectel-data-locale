@@ -1,0 +1,13 @@
+PN: quectel-data
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel RemoteFs Service
+SUMMARY: quectel-data version git-r1
+SECTION: base
+PKG_quectel-data-locale: quectel-data-locale
+FILES_quectel-data-locale: /usr/share/locale
+FILES_INFO: {}
+PKGSIZE_quectel-data-locale: 0

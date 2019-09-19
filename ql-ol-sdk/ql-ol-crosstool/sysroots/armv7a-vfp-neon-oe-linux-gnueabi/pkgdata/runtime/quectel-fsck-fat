@@ -1,0 +1,18 @@
+PN: quectel-fsck-fat
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: Quectel fsck.fat install
+SUMMARY: quectel-fsck-fat version git-r1
+RDEPENDS_quectel-fsck-fat: glibc (>= 2.21) libgcc (>= 4.9.2)
+SECTION: base
+PKG_quectel-fsck-fat: quectel-fsck-fat
+FILES_quectel-fsck-fat: /usr/bin/* /usr/sbin/* /usr/lib/quectel-fsck-fat/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/quectel-fsck-fat /usr/lib/quectel-fsck-fat/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers
+FILERPROVIDESFLIST_quectel-fsck-fat: /sbin/fsck.fat
+FILES_INFO: {"/sbin/fsck.fat": 50828}
+FILERPROVIDES_/sbin/fsck.fat_quectel-fsck-fat: elf(buildid) (= 6200dfc46fce7ee57d58f51ab0f35515c05507e8)
+FILERDEPENDSFLIST_quectel-fsck-fat: /sbin/fsck.fat
+FILERDEPENDS_/sbin/fsck.fat_quectel-fsck-fat: ld-linux.so.3 ld-linux.so.3(GLIBC_2.4) libc.so.6 libc.so.6(GLIBC_2.4) libc.so.6(GLIBC_2.7) libgcc_s.so.1 libgcc_s.so.1(GCC_3.5) rtld(GNU_HASH)
+PKGSIZE_quectel-fsck-fat: 50828

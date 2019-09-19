@@ -1,0 +1,14 @@
+PN: adns
+PV: 1.5.1
+PR: r0
+PKGV: 1.5.1
+PKGR: r0
+LICENSE: GPL
+DESCRIPTION_adns-staticdev: An advanced alternative, asynchronous resolver.  This package contains static libraries for software development.
+SUMMARY_adns-staticdev: adns version 1.5.1-r0 - Development files (Static Libraries)
+RDEPENDS_adns-staticdev: adns-dev (= 1.5.1-r0)
+SECTION_adns-staticdev: devel
+PKG_adns-staticdev: adns-staticdev
+FILES_adns-staticdev: /usr/lib/*.a /lib/*.a /usr/lib/adns/*.a
+FILES_INFO: {"/usr/lib/libadns.a": 120216}
+PKGSIZE_adns-staticdev: 120216

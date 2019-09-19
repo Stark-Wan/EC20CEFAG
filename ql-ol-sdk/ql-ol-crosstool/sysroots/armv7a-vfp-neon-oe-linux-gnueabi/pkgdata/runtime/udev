@@ -1,0 +1,45 @@
+PN: udev
+PV: 182
+PR: r21
+PKGV: 182
+PKGR: r21
+LICENSE_udev: GPLv2.0+
+DESCRIPTION: udev is a daemon which dynamically creates and removes device nodes from /dev/, handles hotplug events and loads drivers at boot time.
+SUMMARY: /dev/ and hotplug management daemon
+RDEPENDS_udev: util-linux-libblkid (>= 2.25.2) glibc (>= 2.21) libkmod (>= 19+git0+fd56638aed)
+RPROVIDES_udev: hotplug
+RRECOMMENDS_udev:  udev-cache update-rc.d
+SECTION: base
+PKG_udev: udev
+FILES_udev: /usr/bin/* /usr/sbin/* /lib/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/udev /usr/lib/udev/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers /lib /usr/lib/ConsoleKit /lib/udev /usr/bin/udevadm
+pkg_postinst_udev: #!/bin/sh\nif type update-rc.d >/dev/null 2>/dev/null; then\n\tif [ -n "$D" ]; then\n\t\tOPT="-r $D"\n\telse\n\t\tOPT="-s"\n\tfi\n\tupdate-rc.d $OPT udev start 04 S .\nfi\n
+pkg_postrm_udev: #!/bin/sh\nif type update-rc.d >/dev/null 2>/dev/null; then\n\tif [ -n "$D" ]; then\n\t\tOPT="-f -r $D"\n\telse\n\t\tOPT="-f"\n\tfi\n\tupdate-rc.d $OPT udev remove\nfi\n
+pkg_preinst_udev: #!/bin/sh\nif [ -z "$D" -a -f "/etc/init.d/udev" ]; then\n\t/etc/init.d/udev stop\nfi\nif type update-rc.d >/dev/null 2>/dev/null; then\n\tif [ -n "$D" ]; then\n\t\tOPT="-f -r $D"\n\telse\n\t\tOPT="-f"\n\tfi\n\tupdate-rc.d $OPT udev remove\nfi\n
+pkg_prerm_udev: #!/bin/sh\nif [ -z "$D" ]; then\n\t/etc/init.d/udev stop\nfi\n
+FILERPROVIDESFLIST_udev: /lib/udev/keymap /lib/udev/accelerometer /lib/udev/udevd /lib/udev/mtd@underscore@probe /lib/udev/ata@underscore@id /lib/udev/collect /usr/bin/udevadm /lib/udev/scsi@underscore@id /lib/udev/v4l@underscore@id /lib/udev/cdrom@underscore@id
+FILES_INFO: {"/lib/udev/keymaps/fujitsu-esprimo_mobile_v5": 70, "/lib/udev/keymaps/fujitsu-amilo_pro_v3205": 82, "/lib/udev/rules.d/60-persistent-alsa.rules": 616, "/lib/udev/mtd_probe": 4144, "/lib/udev/keymaps/fujitsu-esprimo_mobile_v6": 38, "/lib/udev/keymaps/maxdata-pro_7000": 139, "/lib/udev/keymaps/lenovo-ideapad": 399, "/usr/bin/udevadm": 137792, "/lib/udev/keymaps/toshiba-satellite_a110": 158, "/lib/udev/keymaps/hewlett-packard-tablet": 82, "/lib/udev/keymaps/lenovo-thinkpad_x200_tablet": 138, "/lib/udev/keymaps/acer-aspire_8930": 157, "/lib/udev/keymaps/samsung-sq1us": 60, "/lib/udev/rules.d/78-sound-card.rules": 4174, "/etc/init.d/udev": 4788, "/lib/udev/keymaps/acer": 649, "/lib/udev/ata_id": 16960, "/lib/udev/keymaps/compaq-e_evo": 54, "/lib/udev/keymaps/acer-aspire_5720": 163, "/lib/udev/rules.d/95-udev-late.rules": 155, "/lib/udev/v4l_id": 4136, "/lib/udev/keymaps/medionnb-a555": 103, "/lib/udev/collect": 14484, "/lib/udev/rules.d/60-persistent-storage.rules": 5622, "/lib/udev/keymaps/micro-star": 331, "/lib/udev/keymaps/samsung-other": 476, "/lib/udev/keymaps/hewlett-packard": 262, "/lib/udev/rules.d/80-drivers.rules": 565, "/lib/udev/keymaps/module-lenovo": 439, "/lib/udev/keymaps/medion-fid2060": 60, "/lib/udev/keymaps/lg-x110": 324, "/lib/udev/rules.d/60-persistent-input.rules": 2400, "/lib/udev/keymaps/acer-aspire_5920g": 78, "/lib/udev/keymaps/oqo-model2": 71, "/lib/udev/keymaps/toshiba-satellite_m30x": 118, "/lib/udev/keymaps/lenovo-thinkpad-usb-keyboard-trackpoint": 381, "/lib/udev/rules.d/50-udev-default.rules": 3652, "/lib/udev/keymaps/olpc-xo": 1223, "/lib/udev/rules.d/60-persistent-storage-tape.rules": 1420, "/lib/udev/keymaps/logitech-wave": 495, "/lib/udev/keymaps/genius-slimstar-320": 720, "/lib/udev/keymaps/logitech-wave-cordless": 316, "/lib/udev/findkeyboards": 2613, "/lib/udev/keymap": 31952, "/lib/udev/keymaps/inventec-symphony_6.0_7.0": 22, "/lib/udev/rules.d/61-accelerometer.rules": 166, "/lib/udev/rules.d/75-net-description.rules": 570, "/lib/udev/keymaps/force-release/common-volume-keys": 45, "/lib/udev/rules.d/95-keymap.rules": 11644, "/lib/udev/keymaps/zepto-znote": 495, "/lib/udev/rules.d/95-keyboard-force-release.rules": 3328, "/lib/udev/keymaps/fujitsu-amilo_si_1520": 84, "/lib/udev/rules.d/75-tty-description.rules": 570, "/lib/udev/keymaps/force-release/samsung-other": 317, "/lib/udev/keymaps/hewlett-packard-2510p_2530p": 47, "/lib/udev/keymaps/acer-travelmate_c300": 110, "/lib/udev/keymaps/onkyo": 316, "/lib/udev/rules.d/75-probe_mtd.rules": 255, "/lib/udev/keymaps/hewlett-packard-tx2": 104, "/lib/udev/scsi_id": 27212, "/lib/udev/keymaps/force-release/hp-other": 94, "/lib/udev/keymaps/hewlett-packard-compaq_elitebook": 59, "/lib/udev/keymaps/logitech-wave-pro-cordless": 198, "/lib/udev/keymaps/acer-aspire_6920": 86, "/lib/udev/keymaps/samsung-sx20s": 67, "/lib/udev/keymaps/dell-latitude-xt2": 115, "/lib/udev/keymaps/hewlett-packard-presario-2100": 38, "/lib/udev/keymaps/module-asus-w3j": 174, "/lib/udev/keymaps/fujitsu-amilo_pa_2548": 41, "/lib/udev/keymaps/module-sony-old": 23, "/lib/udev/keymaps/force-release/dell-touchpad": 5, "/lib/udev/keymaps/dell": 1169, "/lib/udev/cdrom_id": 28224, "/lib/udev/keymaps/fujitsu-amilo_li_2732": 152, "/lib/udev/udevd": 137892, "/lib/udev/rules.d/60-persistent-serial.rules": 947, "/lib/udev/rules.d/60-cdrom_id.rules": 646, "/etc/udev/rules.d/local.rules": 1030, "/lib/udev/keymaps/module-ibm": 418, "/etc/udev/udev.conf": 69, "/lib/udev/keymaps/everex-xt5000": 139, "/lib/udev/keymaps/toshiba-satellite_a100": 21, "/lib/udev/keymaps/fujitsu-amilo_pro_edition_v3505": 101, "/etc/udev/cache.data": 0, "/lib/udev/rules.d/42-usb-hid-pm.rules": 3025, "/lib/udev/keymaps/ibm-thinkpad-usb-keyboard-trackpoint": 129, "/lib/udev/keymaps/module-sony": 188, "/lib/udev/keymaps/lenovo-3000": 146, "/lib/udev/rules.d/60-persistent-v4l.rules": 769, "/lib/udev/keymaps/lenovo-thinkpad_x6_tablet": 195, "/lib/udev/accelerometer": 26748, "/lib/udev/keyboard-force-release.sh": 621, "/lib/udev/keymaps/hewlett-packard-pavilion": 78, "/lib/udev/keymaps/asus": 40, "/lib/udev/keymaps/module-sony-vgn": 152}
+FILERPROVIDES_/lib/udev/keymap_udev: elf(buildid) (= 466d391886e4862107ff9addddf66c1fbc78962f)
+FILERPROVIDES_/lib/udev/accelerometer_udev: elf(buildid) (= 82a39c8376a5a07bd36d741fe5f99bc975bbe06f)
+FILERPROVIDES_/lib/udev/udevd_udev: elf(buildid) (= 8f4d3fb99709a254ad4f92f8c570dfc5b0b34558)
+FILERPROVIDES_/lib/udev/mtd@underscore@probe_udev: elf(buildid) (= 3d891f746ac543be1cde24370c194f8ed1e2db28)
+FILERPROVIDES_/lib/udev/ata@underscore@id_udev: elf(buildid) (= de8481523223a3852ac201c903b3b72aa20f8b7d)
+FILERPROVIDES_/lib/udev/collect_udev: elf(buildid) (= da2f922aace5f1e5e23be4de8c333b84fc0e3c00)
+FILERPROVIDES_/usr/bin/udevadm_udev: elf(buildid) (= ba0d670136752feb2f6342fc0eebf948a5f06f20)
+FILERPROVIDES_/lib/udev/scsi@underscore@id_udev: elf(buildid) (= 181c6366dfb5c97c09495e25de6fd1e06625b452)
+FILERPROVIDES_/lib/udev/v4l@underscore@id_udev: elf(buildid) (= 250b35ef30ba5aed3e0c3bf1596f0808ff145b9f)
+FILERPROVIDES_/lib/udev/cdrom@underscore@id_udev: elf(buildid) (= a33a9b64a27ec0bced34294e845bd5161f109d24)
+FILERDEPENDSFLIST_udev: /lib/udev/keymap /lib/udev/mtd@underscore@probe /lib/udev/accelerometer /lib/udev/udevd /lib/udev/keyboard-force-release.sh /lib/udev/ata@underscore@id /lib/udev/collect /lib/udev/findkeyboards /etc/init.d/udev /usr/bin/udevadm /lib/udev/scsi@underscore@id /lib/udev/v4l@underscore@id /lib/udev/cdrom@underscore@id
+FILERDEPENDS_/lib/udev/keymap_udev: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/udev/mtd@underscore@probe_udev: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/udev/accelerometer_udev: libc.so.6 libc.so.6(GLIBC_2.4) libm.so.6 libm.so.6(GLIBC_2.4) librt.so.1 librt.so.1(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/udev/udevd_udev: libblkid.so.1 libblkid.so.1(BLKID_2.15) libblkid.so.1(BLKID_2.17) libblkid.so.1(BLKID_2.18) libc.so.6 libc.so.6(GLIBC_2.10) libc.so.6(GLIBC_2.4) libc.so.6(GLIBC_2.6) libc.so.6(GLIBC_2.7) libc.so.6(GLIBC_2.9) libkmod.so.2 libkmod.so.2(LIBKMOD_5) librt.so.1 librt.so.1(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/udev/keyboard-force-release.sh_udev: /bin/sh
+FILERDEPENDS_/lib/udev/ata@underscore@id_udev: libc.so.6 libc.so.6(GLIBC_2.4) librt.so.1 librt.so.1(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/udev/collect_udev: libc.so.6 libc.so.6(GLIBC_2.4) librt.so.1 librt.so.1(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/udev/findkeyboards_udev: /bin/sh
+FILERDEPENDS_/etc/init.d/udev_udev: /bin/sh
+FILERDEPENDS_/usr/bin/udevadm_udev: libblkid.so.1 libblkid.so.1(BLKID_2.15) libblkid.so.1(BLKID_2.17) libblkid.so.1(BLKID_2.18) libc.so.6 libc.so.6(GLIBC_2.10) libc.so.6(GLIBC_2.4) libc.so.6(GLIBC_2.6) libc.so.6(GLIBC_2.7) libc.so.6(GLIBC_2.9) libkmod.so.2 libkmod.so.2(LIBKMOD_5) librt.so.1 librt.so.1(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/udev/scsi@underscore@id_udev: libc.so.6 libc.so.6(GLIBC_2.4) librt.so.1 librt.so.1(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/udev/v4l@underscore@id_udev: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/udev/cdrom@underscore@id_udev: libc.so.6 libc.so.6(GLIBC_2.4) librt.so.1 librt.so.1(GLIBC_2.4) rtld(GNU_HASH)
+PKGSIZE_udev: 492143

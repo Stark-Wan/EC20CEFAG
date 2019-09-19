@@ -1,0 +1,15 @@
+PN: ql-manager
+PV: git
+PR: r21
+PKGV: git
+PKGR: r21
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_ql-manager-dbg: Quectel Manager Modules  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY_ql-manager-dbg: ql-manager version git-r21 - Debugging files
+RRECOMMENDS_ql-manager-dbg: libnl-dbg libnl-genl-dbg dsutils-dbg glibc-dbg data-dbg configdb-dbg adns-dbg diag-dbg time-genoff-dbg ql-common-tools-dbg glib-2.0-dbg qmi-framework-dbg xmllib-dbg qmi-dbg
+SECTION_ql-manager-dbg: devel
+PKG_ql-manager-dbg: ql-manager-dbg
+ALLOW_EMPTY_ql-manager-dbg: 1
+FILES_ql-manager-dbg: /usr/bin/.debug /usr/sbin/.debug /usr/lib/ql-manager/.debug /usr/lib/.debug /bin/.debug /sbin/.debug /lib/.debug /usr/lib/ql-manager/.debug /usr/lib/matchbox-panel/.debug /usr/lib/ql-manager/ql-manager/.debug /usr/src/debug
+FILES_INFO: {"/usr/lib/.debug/libql_mgmt_client.so.1.0.0": 134458, "/usr/bin/.debug/ql_manager_cli": 86066, "/usr/bin/.debug/ql_manager_server": 476087, "/usr/lib/.debug/libql_mam_ipc.so.1.0.0": 34635}
+PKGSIZE_ql-manager-dbg: 731246

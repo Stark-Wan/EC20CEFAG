@@ -1,0 +1,16 @@
+PN: quectel-config-ini
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-config-ini-dev: quectel-config-ini version git-r1.  This package contains symbolic links, header files, and related items necessary for software development.
+SUMMARY_quectel-config-ini-dev: quectel-config-ini version git-r1 - Development files
+RDEPENDS_quectel-config-ini-dev: quectel-config-ini (= git-r1)
+RRECOMMENDS_quectel-config-ini-dev: glibc-dev initscripts-dev
+SECTION_quectel-config-ini-dev: devel
+PKG_quectel-config-ini-dev: quectel-config-ini-dev
+ALLOW_EMPTY_quectel-config-ini-dev: 1
+FILES_quectel-config-ini-dev: /usr/include /lib/lib*.so /usr/lib/lib*.so /usr/lib/*.la /usr/lib/*.o /usr/lib/pkgconfig /usr/share/pkgconfig /usr/share/aclocal /lib/*.o /usr/lib/quectel-config-ini/*.la /lib/*.la
+FILES_INFO: {}
+PKGSIZE_quectel-config-ini-dev: 0

@@ -1,0 +1,30 @@
+PN: libnss-mdns
+PV: 0.10
+PR: r7
+PKGV: 0.10
+PKGR: r7
+LICENSE: LGPLv2.1+
+DESCRIPTION: Name Service Switch module for Multicast DNS (zeroconf) name resolution.
+SUMMARY: Name Service Switch module for Multicast DNS (zeroconf) name resolution
+RDEPENDS_libnss-mdns: avahi-daemon glibc (>= 2.21)
+SECTION: libs
+PKG_libnss-mdns: libnss-mdns
+FILES_libnss-mdns: /usr/bin/* /usr/sbin/* /usr/lib/libnss-mdns/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/libnss-mdns /usr/lib/libnss-mdns/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers
+pkg_postinst_libnss-mdns: \tsed -e \'/^hosts:/s/\\s*\\<mdns\\>//\' \\\n\t\t-e \'s/\\(^hosts:.*\\)\\(\\<files\\>\\)\\(.*\\)\\(\\<dns\\>\\)\\(.*\\)/\\1\\2 mdns4_minimal [NOTFOUND=return]\\3\\4 mdns\\5/\' \\\n\t\t-i $D/etc/nsswitch.conf\n
+pkg_prerm_libnss-mdns: \tsed -e \'/^hosts:/s/\\s*\\<mdns\\>//\' \\\n\t\t-e \'/^hosts:/s/\\s*mdns4_minimal\\s\\+\\[NOTFOUND=return\\]//\' \\\n\t\t-i $D/etc/nsswitch.conf\n
+FILERPROVIDESFLIST_libnss-mdns: /lib/libnss@underscore@mdns6.so.2 /lib/libnss@underscore@mdns@underscore@minimal.so.2 /lib/libnss@underscore@mdns4.so.2 /lib/libnss@underscore@mdns4@underscore@minimal.so.2 /lib/libnss@underscore@mdns6@underscore@minimal.so.2 /lib/libnss@underscore@mdns.so.2
+FILES_INFO: {"/lib/libnss_mdns6_minimal.so.2": 7804, "/lib/libnss_mdns6.so.2": 8280, "/lib/libnss_mdns.so.2": 8712, "/lib/libnss_mdns_minimal.so.2": 8184, "/lib/libnss_mdns4_minimal.so.2": 7744, "/lib/libnss_mdns4.so.2": 8216}
+FILERPROVIDES_/lib/libnss@underscore@mdns6.so.2_libnss-mdns: elf(buildid) (= b316368f482002fc9ad4ca35fc386bdb4084fb0c) libnss_mdns6.so.2 libnss_mdns6.so.2(NSSMDNS_0)
+FILERPROVIDES_/lib/libnss@underscore@mdns@underscore@minimal.so.2_libnss-mdns: elf(buildid) (= 6e074fe87492a203629c48600530a5f89742049e) libnss_mdns_minimal.so.2 libnss_mdns_minimal.so.2(NSSMDNS_0)
+FILERPROVIDES_/lib/libnss@underscore@mdns4.so.2_libnss-mdns: elf(buildid) (= cd2bd676f95b12bec3674969e4fd0d8da89e8b4a) libnss_mdns4.so.2 libnss_mdns4.so.2(NSSMDNS_0)
+FILERPROVIDES_/lib/libnss@underscore@mdns4@underscore@minimal.so.2_libnss-mdns: elf(buildid) (= fc7ce755ba83b710e8969c96df03e44a69cf468b) libnss_mdns4_minimal.so.2 libnss_mdns4_minimal.so.2(NSSMDNS_0)
+FILERPROVIDES_/lib/libnss@underscore@mdns6@underscore@minimal.so.2_libnss-mdns: elf(buildid) (= 7f969afeba924b09da3fc7046192f66445287802) libnss_mdns6_minimal.so.2 libnss_mdns6_minimal.so.2(NSSMDNS_0)
+FILERPROVIDES_/lib/libnss@underscore@mdns.so.2_libnss-mdns: elf(buildid) (= 72faf8ff0f153fe50d179100c7e4a4a4e09c0524) libnss_mdns.so.2 libnss_mdns.so.2(NSSMDNS_0)
+FILERDEPENDSFLIST_libnss-mdns: /lib/libnss@underscore@mdns6.so.2 /lib/libnss@underscore@mdns@underscore@minimal.so.2 /lib/libnss@underscore@mdns4.so.2 /lib/libnss@underscore@mdns4@underscore@minimal.so.2 /lib/libnss@underscore@mdns6@underscore@minimal.so.2 /lib/libnss@underscore@mdns.so.2
+FILERDEPENDS_/lib/libnss@underscore@mdns6.so.2_libnss-mdns: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/libnss@underscore@mdns@underscore@minimal.so.2_libnss-mdns: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/libnss@underscore@mdns4.so.2_libnss-mdns: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/libnss@underscore@mdns4@underscore@minimal.so.2_libnss-mdns: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/libnss@underscore@mdns6@underscore@minimal.so.2_libnss-mdns: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/lib/libnss@underscore@mdns.so.2_libnss-mdns: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+PKGSIZE_libnss-mdns: 48940

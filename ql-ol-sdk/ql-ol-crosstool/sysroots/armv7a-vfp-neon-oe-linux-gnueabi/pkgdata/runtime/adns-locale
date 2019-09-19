@@ -1,0 +1,13 @@
+PN: adns
+PV: 1.5.1
+PR: r0
+PKGV: 1.5.1
+PKGR: r0
+LICENSE: GPL
+DESCRIPTION: An advanced alternative, asynchronous resolver.
+SUMMARY: adns version 1.5.1-r0
+SECTION: console/network
+PKG_adns-locale: adns-locale
+FILES_adns-locale: /usr/share/locale
+FILES_INFO: {}
+PKGSIZE_adns-locale: 0

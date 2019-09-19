@@ -1,0 +1,26 @@
+PN: quectel-config-ini
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION: quectel-config-ini version git-r1.
+SUMMARY: quectel-config-ini version git-r1
+RDEPENDS_quectel-config-ini: glibc (>= 2.21)
+RRECOMMENDS_quectel-config-ini:  update-rc.d
+SECTION: base
+PKG_quectel-config-ini: quectel-config-ini
+FILES_quectel-config-ini: /usr/bin/* /usr/sbin/* /usr/lib/quectel-config-ini/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/quectel-config-ini /usr/lib/quectel-config-ini/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers /data/
+pkg_postinst_quectel-config-ini: #!/bin/sh\nif type update-rc.d >/dev/null 2>/dev/null; then\n\tif [ -n "$D" ]; then\n\t\tOPT="-r $D"\n\telse\n\t\tOPT="-s"\n\tfi\n\tupdate-rc.d $OPT QuecOpen_startapp  start 99 5 .\nfi\n
+pkg_postrm_quectel-config-ini: #!/bin/sh\nif type update-rc.d >/dev/null 2>/dev/null; then\n\tif [ -n "$D" ]; then\n\t\tOPT="-f -r $D"\n\telse\n\t\tOPT="-f"\n\tfi\n\tupdate-rc.d $OPT QuecOpen_startapp  remove\nfi\n
+pkg_preinst_quectel-config-ini: #!/bin/sh\nif [ -z "$D" -a -f "/etc/init.d/QuecOpen_startapp " ]; then\n\t/etc/init.d/QuecOpen_startapp  stop\nfi\nif type update-rc.d >/dev/null 2>/dev/null; then\n\tif [ -n "$D" ]; then\n\t\tOPT="-f -r $D"\n\telse\n\t\tOPT="-f"\n\tfi\n\tupdate-rc.d $OPT QuecOpen_startapp  remove\nfi\n
+pkg_prerm_quectel-config-ini: #!/bin/sh\nif [ -z "$D" ]; then\n\t/etc/init.d/QuecOpen_startapp  stop\nfi\n
+FILERPROVIDESFLIST_quectel-config-ini: /usr/bin/tinylog
+FILES_INFO: {"/usr/bin/tinylog": 28820, "/data/ca.cer": 1151, "/etc/mdev/autopartion.sh": 390, "/etc/init.d/QuecOpen.sh": 1141, "/etc/init.d/QuecOpen_startapp": 1194}
+FILERPROVIDES_/usr/bin/tinylog_quectel-config-ini: elf(buildid) (= 2d54c743fb9bd1fbc4007df6dc7b126fa4aa2292)
+FILERDEPENDSFLIST_quectel-config-ini: /etc/mdev/autopartion.sh /etc/init.d/QuecOpen@underscore@startapp /usr/bin/tinylog /etc/init.d/QuecOpen.sh
+FILERDEPENDS_/etc/mdev/autopartion.sh_quectel-config-ini: /bin/sh
+FILERDEPENDS_/etc/init.d/QuecOpen@underscore@startapp_quectel-config-ini: /bin/sh
+FILERDEPENDS_/usr/bin/tinylog_quectel-config-ini: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/etc/init.d/QuecOpen.sh_quectel-config-ini: /bin/sh
+PKGSIZE_quectel-config-ini: 32696

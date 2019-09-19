@@ -1,0 +1,29 @@
+PN: gnutls
+PV: 3.3.12
+PR: r0
+PKGV: 3.3.12
+PKGR: r0
+LICENSE_gnutls-bin: GPLv3+
+DESCRIPTION: GNU Transport Layer Security Library.
+SUMMARY: GNU Transport Layer Security Library
+RDEPENDS_gnutls-bin: gnutls (>= 3.3.12) glibc (>= 2.21)
+RPROVIDES_gnutls-bin:  gnutls-bin
+SECTION: base
+PKG_gnutls-bin: libgnutls-bin
+FILES_gnutls-bin: /usr/bin/* /usr/sbin/*
+FILERPROVIDESFLIST_gnutls-bin: /usr/bin/gnutls-serv /usr/bin/ocsptool /usr/bin/certtool /usr/bin/gnutls-cli /usr/bin/psktool /usr/bin/srptool
+FILES_INFO: {"/usr/bin/gnutls-serv": 130508, "/usr/bin/psktool": 86500, "/usr/bin/certtool": 196260, "/usr/bin/gnutls-cli": 148516, "/usr/bin/ocsptool": 100884, "/usr/bin/srptool": 90884}
+FILERPROVIDES_/usr/bin/gnutls-serv_gnutls-bin: elf(buildid) (= 43b8700c8d1828eed14673a05d2ea9cf011086d0)
+FILERPROVIDES_/usr/bin/ocsptool_gnutls-bin: elf(buildid) (= a0bb2cab2bcc83cba606cf5a57effa2022e96e4d)
+FILERPROVIDES_/usr/bin/certtool_gnutls-bin: elf(buildid) (= 60d0e43e31baac521ea4a6bf7dcc3716cb6150ee)
+FILERPROVIDES_/usr/bin/gnutls-cli_gnutls-bin: elf(buildid) (= 229c7601b56e43bb39a665f4daf8485c05fae50f)
+FILERPROVIDES_/usr/bin/psktool_gnutls-bin: elf(buildid) (= 0e7ad81037093391fd3537f7d6085c89bacc0867)
+FILERPROVIDES_/usr/bin/srptool_gnutls-bin: elf(buildid) (= 985b45fc6ce879b8d534b1748e6a5e5106fc2ddd)
+FILERDEPENDSFLIST_gnutls-bin: /usr/bin/gnutls-serv /usr/bin/ocsptool /usr/bin/certtool /usr/bin/gnutls-cli /usr/bin/psktool /usr/bin/srptool
+FILERDEPENDS_/usr/bin/gnutls-serv_gnutls-bin: libc.so.6 libc.so.6(GLIBC_2.4) libgnutls.so.28 libgnutls.so.28(GNUTLS_1_4) libgnutls.so.28(GNUTLS_2_10) libgnutls.so.28(GNUTLS_2_12) libgnutls.so.28(GNUTLS_2_8) libgnutls.so.28(GNUTLS_3_0_0) libgnutls.so.28(GNUTLS_3_1_0) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/ocsptool_gnutls-bin: libc.so.6 libc.so.6(GLIBC_2.4) libgnutls.so.28 libgnutls.so.28(GNUTLS_1_4) libgnutls.so.28(GNUTLS_2_12) libgnutls.so.28(GNUTLS_3_0_0) libgnutls.so.28(GNUTLS_3_1_0) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/certtool_gnutls-bin: libc.so.6 libc.so.6(GLIBC_2.17) libc.so.6(GLIBC_2.4) libgnutls.so.28 libgnutls.so.28(GNUTLS_1_4) libgnutls.so.28(GNUTLS_2_10) libgnutls.so.28(GNUTLS_2_12) libgnutls.so.28(GNUTLS_2_8) libgnutls.so.28(GNUTLS_3_0_0) libgnutls.so.28(GNUTLS_3_1_0) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/gnutls-cli_gnutls-bin: libc.so.6 libc.so.6(GLIBC_2.17) libc.so.6(GLIBC_2.4) libgnutls.so.28 libgnutls.so.28(GNUTLS_1_4) libgnutls.so.28(GNUTLS_2_10) libgnutls.so.28(GNUTLS_2_12) libgnutls.so.28(GNUTLS_3_0_0) libgnutls.so.28(GNUTLS_3_1_0) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/psktool_gnutls-bin: libc.so.6 libc.so.6(GLIBC_2.4) libgnutls.so.28 libgnutls.so.28(GNUTLS_1_4) libgnutls.so.28(GNUTLS_2_12) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/srptool_gnutls-bin: libc.so.6 libc.so.6(GLIBC_2.4) libgnutls.so.28 libgnutls.so.28(GNUTLS_1_4) libgnutls.so.28(GNUTLS_2_12) libgnutls.so.28(GNUTLS_3_0_0) rtld(GNU_HASH)
+PKGSIZE_gnutls-bin: 753552

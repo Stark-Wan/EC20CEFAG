@@ -1,0 +1,22 @@
+PN: qcacld-utils
+PV: git-invalidgit
+PR: r0
+PKGV: git-invalidgit
+PKGR: r0
+LICENSE: Qualcomm-Technologies-Inc.-Proprietary
+DESCRIPTION: Qualcomm Atheros WLAN CLD utils
+SUMMARY: qcacld-utils version git-invalidgit-r0
+RDEPENDS_qcacld-utils: diag (>= git-invalidgit) glibc (>= 2.21) glib-2.0 (>= 2.42.1)
+SECTION: base
+PKG_qcacld-utils: qcacld-utils
+FILES_qcacld-utils: /usr/bin/* /usr/sbin/* /usr/lib/qcacld-utils/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/qcacld-utils /usr/lib/qcacld-utils/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers
+FILERPROVIDESFLIST_qcacld-utils: /usr/bin/pktlogconf /usr/bin/athdiag /usr/bin/cnss@underscore@diag
+FILES_INFO: {"/usr/bin/pktlogconf": 9084, "/usr/bin/cnss_diag": 179032, "/usr/bin/athdiag": 19756}
+FILERPROVIDES_/usr/bin/pktlogconf_qcacld-utils: elf(buildid) (= af270e6bdd387912b77e8fda11b4d37e6bdfdf44)
+FILERPROVIDES_/usr/bin/athdiag_qcacld-utils: elf(buildid) (= f757fa04c17e13336db56c62ada02de1540c13ca)
+FILERPROVIDES_/usr/bin/cnss@underscore@diag_qcacld-utils: elf(buildid) (= 5d22a5d6b9bea3d245e03590937b2a2e0a178d60)
+FILERDEPENDSFLIST_qcacld-utils: /usr/bin/pktlogconf /usr/bin/athdiag /usr/bin/cnss@underscore@diag
+FILERDEPENDS_/usr/bin/pktlogconf_qcacld-utils: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/athdiag_qcacld-utils: libc.so.6 libc.so.6(GLIBC_2.4) rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/cnss@underscore@diag_qcacld-utils: libc.so.6 libc.so.6(GLIBC_2.4) libdiag.so.1 libglib-2.0.so.0 libpthread.so.0 libpthread.so.0(GLIBC_2.4) rtld(GNU_HASH)
+PKGSIZE_qcacld-utils: 207872

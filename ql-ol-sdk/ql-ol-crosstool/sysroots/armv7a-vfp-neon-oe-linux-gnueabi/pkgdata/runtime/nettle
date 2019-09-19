@@ -1,0 +1,28 @@
+PN: nettle
+PV: 2.7.1
+PR: r0
+PKGV: 2.7.1
+PKGR: r0
+LICENSE: LGPLv2.1 & GPLv2
+DESCRIPTION: A low level cryptographic library.
+SUMMARY: A low level cryptographic library
+RDEPENDS_nettle: glibc (>= 2.21) gmp (>= 6.0.0)
+SECTION: libs
+PKG_nettle: nettle
+FILES_nettle: /usr/bin/* /usr/sbin/* /usr/lib/nettle/* /usr/lib/lib*.so.* /etc /com /var /bin/* /sbin/* /lib/*.so.* /lib/udev/rules.d /usr/lib/udev/rules.d /usr/share/nettle /usr/lib/nettle/* /usr/share/pixmaps /usr/share/applications /usr/share/idl /usr/share/omf /usr/share/sounds /usr/lib/bonobo/servers
+FILERPROVIDESFLIST_nettle: /usr/lib/libnettle.so.4.7 /usr/bin/pkcs1-conv /usr/lib/libhogweed.so.2.5 /usr/bin/nettle-lfib-stream /usr/bin/nettle-hash /usr/bin/sexp-conv
+FILES_INFO: {"/usr/lib/libhogweed.so.2": 163080, "/usr/bin/pkcs1-conv": 10752, "/usr/lib/libnettle.so.4": 198088, "/usr/bin/nettle-lfib-stream": 4124, "/usr/bin/nettle-hash": 7412, "/usr/bin/sexp-conv": 16588}
+FILERPROVIDES_/usr/lib/libnettle.so.4.7_nettle: elf(buildid) (= 70a85d5eecb6da7646da5de4160a15ac30b6a660) libnettle.so.4
+FILERPROVIDES_/usr/bin/pkcs1-conv_nettle: elf(buildid) (= 8a6d38e3b8c67f8ef592ef47e1576b0c905cdb20)
+FILERPROVIDES_/usr/lib/libhogweed.so.2.5_nettle: elf(buildid) (= c99380f494bf67897c179c893f60a00b72a8eea2) libhogweed.so.2
+FILERPROVIDES_/usr/bin/nettle-lfib-stream_nettle: elf(buildid) (= cc92787d13dea255d675abf566bdd36f8a83cd43)
+FILERPROVIDES_/usr/bin/nettle-hash_nettle: elf(buildid) (= cb0f5ae382b889af68acaf40cba928eac0e05a03)
+FILERPROVIDES_/usr/bin/sexp-conv_nettle: elf(buildid) (= c9c963aaa123daadda6efe81f8801b42b647a8bd)
+FILERDEPENDSFLIST_nettle: /usr/lib/libnettle.so.4.7 /usr/bin/pkcs1-conv /usr/lib/libhogweed.so.2.5 /usr/bin/nettle-lfib-stream /usr/bin/nettle-hash /usr/bin/sexp-conv
+FILERDEPENDS_/usr/lib/libnettle.so.4.7_nettle: rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/pkcs1-conv_nettle: libc.so.6 libc.so.6(GLIBC_2.4) libhogweed.so.2 libnettle.so.4 rtld(GNU_HASH)
+FILERDEPENDS_/usr/lib/libhogweed.so.2.5_nettle: rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/nettle-lfib-stream_nettle: libc.so.6 libc.so.6(GLIBC_2.4) libnettle.so.4 rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/nettle-hash_nettle: libc.so.6 libc.so.6(GLIBC_2.4) libnettle.so.4 rtld(GNU_HASH)
+FILERDEPENDS_/usr/bin/sexp-conv_nettle: libc.so.6 libc.so.6(GLIBC_2.4) libnettle.so.4 rtld(GNU_HASH)
+PKGSIZE_nettle: 400044

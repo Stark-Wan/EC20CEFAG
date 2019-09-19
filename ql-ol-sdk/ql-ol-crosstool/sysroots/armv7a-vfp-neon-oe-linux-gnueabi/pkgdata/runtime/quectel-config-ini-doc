@@ -1,0 +1,13 @@
+PN: quectel-config-ini
+PV: git
+PR: r1
+PKGV: git
+PKGR: r1
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_quectel-config-ini-doc: quectel-config-ini version git-r1.  This package contains documentation.
+SUMMARY_quectel-config-ini-doc: quectel-config-ini version git-r1 - Documentation files
+SECTION_quectel-config-ini-doc: doc
+PKG_quectel-config-ini-doc: quectel-config-ini-doc
+FILES_quectel-config-ini-doc: /usr/share/doc /usr/share/man /usr/share/info /usr/share/gtk-doc /usr/share/gnome/help
+FILES_INFO: {}
+PKGSIZE_quectel-config-ini-doc: 0

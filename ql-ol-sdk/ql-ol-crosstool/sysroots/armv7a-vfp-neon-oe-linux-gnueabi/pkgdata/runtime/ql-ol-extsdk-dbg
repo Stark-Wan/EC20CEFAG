@@ -1,0 +1,15 @@
+PN: ql-ol-extsdk
+PV: git
+PR: r01
+PKGV: git
+PKGR: r01
+LICENSE:  Quectel-Wireless-Solutions-Co-Ltd.-Proprietary 
+DESCRIPTION_ql-ol-extsdk-dbg: Quectel High Data Open API  This package contains ELF symbols and related sources for debugging purposes.
+SUMMARY_ql-ol-extsdk-dbg: ql-ol-extsdk version git-r01 - Debugging files
+RRECOMMENDS_ql-ol-extsdk-dbg: acdbrtac-dbg libstdc++-dbg ql-manager-dbg data-dbg gnutls-dbg dsutils-dbg xmllib-dbg qmi-dbg qmi-framework-dbg qmi-client-helper-dbg diag-dbg audioalsa-dbg ql-common-tools-dbg data-oss-dbg acdbmapper-dbg mcm-core-dbg system-core-liblog-dbg nettle-dbg quectel-audio-lib-dbg adns-dbg gmp-dbg glib-2.0-dbg alsa-intf-dbg zlib-dbg adiertac-dbg audcal-dbg glibc-dbg libcurl-dbg configdb-dbg acdbloader-dbg time-genoff-dbg ql-syslog-dbg
+SECTION_ql-ol-extsdk-dbg: devel
+PKG_ql-ol-extsdk-dbg: ql-ol-extsdk-dbg
+ALLOW_EMPTY_ql-ol-extsdk-dbg: 1
+FILES_ql-ol-extsdk-dbg: /usr/bin/.debug /usr/sbin/.debug /usr/lib/ql-ol-extsdk/.debug /usr/lib/.debug /bin/.debug /sbin/.debug /lib/.debug /usr/lib/ql-ol-extsdk/.debug /usr/lib/matchbox-panel/.debug /usr/lib/ql-ol-extsdk/ql-ol-extsdk/.debug /usr/src/debug
+FILES_INFO: {"/usr/lib/.debug/libql_peripheral.so.0.0.0": 84153, "/usr/lib/.debug/libql_common_api.so.0.0.0": 1014881}
+PKGSIZE_ql-ol-extsdk-dbg: 1099034

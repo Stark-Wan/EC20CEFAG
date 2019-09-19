@@ -1,0 +1,32 @@
+#!/bin/bash
+# Copyright (c) 2018 Quectel Wireless Solutions Co., Ltd. All rights reserved.
+# Quectel Wireless Solutions Proprietary and Confidential.
+# Running.qain,2018.11.06
+
+
+if [ ! -d "${QL_SDK_NATIVE_SYSROOT}/pseudo" ]; then
+    mkdir -p ${QL_SDK_NATIVE_SYSROOT}/pseudo
+fi    
+
+PSEUDO_SYSROOTS_PATH="${QL_SDK_NATIVE_SYSROOT}"
+
+SAVE_LD_PRELOAD="${LD_PRELOAD}"
+SAVE_LD_LIBRARY_PATH="${LD_LIBRARY_PATH}"
+
+export LD_PRELOAD="libpseudo.so"
+export LD_LIBRARY_PATH="${PSEUDO_SYSROOTS_PATH}/usr/lib/pseudo/lib:${PSEUDO_SYSROOTS_PATH}/usr/lib/pseudo/lib64"
+
+export PSEUDO_PREFIX="${PSEUDO_SYSROOTS_PATH}/usr"
+#export PSEUDO_BINDIR="${PSEUDO_PREFIX}/bin"
+export PSEUDO_LIBDIR="${PSEUDO_PREFIX}/lib/pseudo/lib"
+export PSEUDO_LOCALSTATEDIR="${PSEUDO_SYSROOTS_PATH}/pseudo"
+
+#exec input cmd
+$*
+
+export LD_LIBRARY_PATH="${SAVE_LD_LIBRARY_PATH}"
+export LD_PRELOAD="${SAVE_LD_PRELOAD}"
+export PSEUDO_PREFIX=""
+#export PSEUDO_BINDIR=""
+export PSEUDO_LIBDIR=""
+export PSEUDO_LOCALSTATEDIR=""
